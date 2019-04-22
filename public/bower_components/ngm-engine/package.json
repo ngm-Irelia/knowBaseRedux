@@ -1,0 +1,17 @@
+{
+  "name": "ngm-engine",
+  "dependencies": {
+    "request": "^2.81.0",
+    "url": "^0.11.0",
+    "xmlparser": "^0.1.0"
+  },
+  "homepage": "",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "main": "index.js", 
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "version": "0.1.4"
+}

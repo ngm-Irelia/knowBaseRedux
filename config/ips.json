@@ -1,0 +1,7 @@
+{
+  "knowBase": {
+    "ip": "localhost",
+    "port": "9600",
+    "name": "knowBase"
+  }
+}
