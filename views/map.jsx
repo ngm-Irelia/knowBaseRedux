@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import Header from '../common/header/index';
-import Header from '../components/header.jsx';
+import {Header} from '../../build/components/knowBase';
 
 
 const page = {

@@ -6,17 +6,17 @@
  */
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define('UIPage', ['exports', 'react', '../components/header.jsx'], factory);
+    define('UIPage', ['exports', 'react', '../../build/components/knowBase'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../components/header.jsx'));
+    factory(exports, require('react'), require('../../build/components/knowBase'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.React, global.header);
+    factory(mod.exports, global.React, global.KnowBase);
     global.UIPage = mod.exports;
   }
-})(this, function (exports, _react, _header) {
+})(this, function (exports, _react, _knowBase) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -24,8 +24,6 @@
   });
 
   var _react2 = _interopRequireDefault(_react);
-
-  var _header2 = _interopRequireDefault(_header);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -107,7 +105,7 @@
         return _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement(_header2.default, null),
+          _react2.default.createElement(_knowBase.Header, null),
           'map page !!!!',
           _react2.default.createElement(
             'div',
