@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { HeaderWrapper, Logo, Nav, NavItem, NavSearch } from './style';
+//import { HeaderWrapper, Logo, Nav, NavItem, NavSearch } from './style';
 
 import { actionCreators } from './store';
 
@@ -12,7 +12,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <HeaderWrapper className="aaaa">
+            <div>哈哈哈哈哈哈
+                哈哈哈哈哈
+                {/* <HeaderWrapper className="aaaa">
                 <Logo> </Logo>
                 <Nav>
                     <NavItem className="left active">简书</NavItem>
@@ -25,7 +27,8 @@ class Header extends React.Component {
                         onBlur = { this.props.handleBlur }
                     ></NavSearch>
                 </Nav>
-            </HeaderWrapper>
+            </HeaderWrapper> */}
+            </div>
         )
     }
 }

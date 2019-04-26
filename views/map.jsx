@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import Header from '../common/header/index';
 import {Header} from '../../build/components/knowBase';
-
+//import Header from '../../build/components/header.jsx';
 
 const page = {
   title: '首页',

@@ -13,7 +13,7 @@
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.React, global.reactRedux, global.index, global.index, global.reactRouterDom, global.home, global.detail);
+    factory(mod.exports, global.React, global.reactRedux, global.index, global.store, global.reactRouterDom, global.home, global.detail);
     global.UIPage = mod.exports;
   }
 })(this, function (exports, _react, _reactRedux, _index, _store, _reactRouterDom, _home, _detail) {

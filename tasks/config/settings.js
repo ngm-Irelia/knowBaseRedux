@@ -33,8 +33,8 @@ module.exports = {
             image: path.resolve( cwd, 'public/image/**' ),
             bower: path.resolve( cwd, 'public/bower_components/**' ),
             public: path.resolve( cwd, 'public/js/public/**' ),
-            store: path.resolve( cwd, 'store/**' ),
-            common: path.resolve( cwd, 'common/**' )
+            store: path.resolve( cwd, 'store' ),
+            common: path.resolve( cwd, 'common' )
         },
         output: paths,
         clean: [
@@ -54,6 +54,10 @@ module.exports = {
         store: {
             src: 'index.js',
             dist: 'store.js'
+        },
+        common: {
+            src: 'index.js',
+            dist: 'common.js'
         }
     },
 
@@ -69,8 +73,12 @@ module.exports = {
             exports: 'knowBase'
         },
         store: {
-            global: 'index',
+            global: 'store',
             exports: 'store'
+        },
+        common: {
+            global: 'common',
+            exports: 'common'
         }
     },
 

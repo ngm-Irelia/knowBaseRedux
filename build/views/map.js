@@ -79,6 +79,8 @@
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
+  //import Header from '../../build/components/header.jsx';
+
   var page = {
     title: '首页',
     css: [],

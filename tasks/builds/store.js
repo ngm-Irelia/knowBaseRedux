@@ -13,16 +13,16 @@ const webpackStream = require( 'webpack-stream' );
 const config = require( '../config/settings' );
 const tasks  = require( '../config/tasks' );
 
-const { paths: { source: { store: source }, output: { store: output } }, files: { components: files }, banner } = config;
+const { paths: { source: { store: source }, output: { store: output } }, files: { store: files }, banner } = config;
 
 module.exports = ( callback ) => {
 
     console.info( 'Building store' );
 
-    return gulp.src( path.join( source ) )
-        .pipe( gulp.dest( output ) );
+/*     return gulp.src( path.join( source ) )
+        .pipe( gulp.dest( output ) ); */
 
-    /* return gulp.src( path.join( source, files.src ) )
+    return gulp.src( path.join( source, files.src ) )
         .pipe( plumber() )
         .pipe( webpackStream( tasks.webpack.store, webpack ) )
         .pipe( header( banner ) )
@@ -33,6 +33,6 @@ module.exports = ( callback ) => {
           path.basename += '.min'
           return path;
         } ) )
-        .pipe( gulp.dest( output ) ); */
+        .pipe( gulp.dest( output ) );
 
 };
