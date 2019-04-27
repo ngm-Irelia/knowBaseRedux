@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-//import { HeaderWrapper, Logo, Nav, NavItem, NavSearch } from './style';
+import { HeaderWrapper, Logo, Nav, NavItem, NavSearch } from './style';
 
 import { actionCreators } from './store';
 
@@ -12,22 +12,27 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div>哈哈哈哈哈哈
-                哈哈哈哈哈
-                {/* <HeaderWrapper className="aaaa">
+            <div>
+                <HeaderWrapper className="aaaa">
                 <Logo> </Logo>
                 <Nav>
                     <NavItem className="left active">简书</NavItem>
                     <NavItem className="left">首页</NavItem>
                     <NavItem className="right">登陆</NavItem>
                     <NavItem className="right"><span className="iconfont">&#xe6e4;</span></NavItem>
-                    <NavSearch
+                    {/* <NavSearch
                         className={ this.props.focused ? 'focused' : ''}
                         onFocus = { this.props.handleFocused }
                         onBlur = { this.props.handleBlur }
-                    ></NavSearch>
+                    ></NavSearch> */}
+
+                    <input
+                        className={ this.props.focused ? 'focused' : ''}
+                        onFocus = { this.props.handleFocused }
+                        onBlur = { this.props.handleBlur }
+                    ></input>
                 </Nav>
-            </HeaderWrapper> */}
+            </HeaderWrapper>
             </div>
         )
     }

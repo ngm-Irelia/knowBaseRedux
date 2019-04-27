@@ -6,17 +6,17 @@
  */
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define('UIPage', ['exports', 'react', 'react-redux', '../common/header/index', '../store', 'react-router-dom', './home', './detail'], factory);
+    define('UIPage', ['exports', 'react', 'react-redux', '../../build/common/common', '../../build/store/store', 'react-router-dom'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('react-redux'), require('../common/header/index'), require('../store'), require('react-router-dom'), require('./home'), require('./detail'));
+    factory(exports, require('react'), require('react-redux'), require('../../build/common/common'), require('../../build/store/store'), require('react-router-dom'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.React, global.reactRedux, global.index, global.store, global.reactRouterDom, global.home, global.detail);
+    factory(mod.exports, global.React, global.reactRedux, global.common, global.store, global.reactRouterDom);
     global.UIPage = mod.exports;
   }
-})(this, function (exports, _react, _reactRedux, _index, _store, _reactRouterDom, _home, _detail) {
+})(this, function (exports, _react, _reactRedux, _common, _store, _reactRouterDom) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -25,13 +25,7 @@
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _index2 = _interopRequireDefault(_index);
-
   var _store2 = _interopRequireDefault(_store);
-
-  var _home2 = _interopRequireDefault(_home);
-
-  var _detail2 = _interopRequireDefault(_detail);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -113,21 +107,14 @@
         return _react2.default.createElement(
           _reactRedux.Provider,
           { store: _store2.default },
-          _react2.default.createElement(_index2.default, null),
           _react2.default.createElement(
             'div',
             { className: 'browserR' },
+            _react2.default.createElement(_common.Header, null),
             _react2.default.createElement(
               'div',
               null,
               'store'
-            ),
-            _react2.default.createElement(
-              _reactRouterDom.BrowserRouter,
-              null,
-              _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _home2.default }),
-              ' ',
-              _react2.default.createElement(_reactRouterDom.Route, { path: '/detail', exact: true, component: _detail2.default })
             )
           )
         );

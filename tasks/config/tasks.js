@@ -35,6 +35,7 @@ const babelTask = {
           'react-dom': 'ReactDOM',
           'ui': 'UI',
           [ moduleConfig.components.exports ]: moduleConfig.components.global,
+          [ moduleConfig.common.exports ]: moduleConfig.common.global,
           [ moduleConfig.store.exports ]: moduleConfig.store.global
         }
       } ]
@@ -51,6 +52,14 @@ const babelTask = {
   },
 
   store: {
+    presets: [ [ 'env',
+      {
+        "modules": false
+      } ],
+      'react' ]
+  },
+
+  common: {
     presets: [ [ 'env',
       {
         "modules": false
@@ -186,6 +195,47 @@ const webpackTask = {
                   exclude: /node_modules/,
                   loader: 'babel-loader',
                   options: babelTask.store
+              }
+          ]
+      }
+    },
+
+    common: {
+      output: {
+          filename: filesConfig.common.dist,
+          library: moduleConfig.common.global,
+          libraryTarget: 'umd'
+      },
+      externals: {
+          react: {
+              root: 'React',
+              commonjs2: 'react',
+              commonjs: 'react',
+              amd: 'react'
+          },
+          'react-dom': {
+              root: 'ReactDOM',
+              commonjs2: 'react-dom',
+              commonjs: 'react-dom',
+              amd: 'react-dom'
+          },
+          'ui': {
+            root: 'UI',
+            commonjs2: 'ui',
+            commonjs: 'ui',
+            amd: 'ui'
+          }
+      },
+      resolve: {
+          extensions: [ '.js', '.jsx' ]
+      },
+      module: {
+          loaders: [
+              {
+                  test: /\.(js|jsx)$/,
+                  exclude: /node_modules/,
+                  loader: 'babel-loader',
+                  options: babelTask.common
               }
           ]
       }

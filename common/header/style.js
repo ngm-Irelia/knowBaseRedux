@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logoPic from '../../public/image/favicon.ico';
+//import logoPic from './header/favicon.ico';
 
 export const HeaderWrapper = styled.div`
     position:relative;
@@ -13,7 +13,6 @@ export const Logo = styled.a.attrs({"href":'/'})`
     width: 64px;
     border-bottom:1px solid #f0f0f0;
     display:block;
-    background:url(${logoPic});
 `;
 
 export const Nav = styled.div`

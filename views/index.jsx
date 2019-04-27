@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
-import Header from '../common/header/index';
-import store from '../store';
+import {Header} from '../../build/common/common';
+import store from '../../build/store/store';
 
 import { BrowserRouter, Route } from "react-router-dom";
-
-import Home from './home';
-import Detail from './detail';
 
 const page = {
   title: '首页',
@@ -27,13 +24,10 @@ class Index extends Component {
     return (
      
       <Provider store={store}>
-        <Header />
+       
         <div className="browserR">
+          <Header />
           <div>store</div>
-          <BrowserRouter> 
-              <Route path="/" exact component={Home} /> {/* 使用<Route /> 而不是 <Route></Route>*/}
-              <Route path="/detail" exact component={Detail} />
-          </BrowserRouter>
         </div>
         
       </Provider>
