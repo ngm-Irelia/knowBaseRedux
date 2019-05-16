@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
+import {Provider} from 'react-redux';
 
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
   if ( window.UIPage ) {
-    console.log("props ++++++++++++++++++++++++++++++   ");
+    console.log("props ++++++++++++++++aaaaa++++++++++++++   ");
     console.log(${ props });
+    console.log(${ ctx });
     UIPage.context = ${ ctx };
     var container = document.getElementById( "${ PAGE_ROOT }" );
     var Page = UIPage.default || UIPage;
+    console.log(Page);
+    console.log(UIPage.default);
     var ngmn = container;
     var ngmg = ${ props };
     var ngmcontext = ${ ctx };
     var Magicube = ${ props };
-    ReactDOM.render(
-      React.createElement( Page, ${ props } ),
-      container
-    );
+    //ReactDOM.render( React.createElement( Page, ${ props } ), container );
   }
 `.trim();
 
@@ -28,8 +29,8 @@ export default ( props ) => {
     const contextPath = context.contextPath;
     const page = props.component.UIPage || {};
     
-    /*console.log("props.data -------------------------   ");
-    console.log(props.data);*/
+    console.log("props.data -------------------------   ");
+    console.log(props.data);
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
 
     let data = props.data;

@@ -1,7 +1,7 @@
 import { SEARCH_FOCUS, SEARCH_BLUR, INIT_LIST_ACTION } from './actionTypes'
 
 const defaultState = {
-  focused:false
+  focused:true
 };
 
 export default (state=defaultState, action) => {

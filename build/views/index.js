@@ -6,17 +6,17 @@
  */
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define('UIPage', ['exports', 'react', 'react-redux', '../../build/common/common', '../../build/store/store', 'react-router-dom'], factory);
+    define('UIPage', ['exports', 'react', 'react-redux', '../../build/common/common', '../../build/store/store', 'react-dom', 'react-router-dom'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('react-redux'), require('../../build/common/common'), require('../../build/store/store'), require('react-router-dom'));
+    factory(exports, require('react'), require('react-redux'), require('../../build/common/common'), require('../../build/store/store'), require('react-dom'), require('react-router-dom'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.React, global.reactRedux, global.common, global.store, global.reactRouterDom);
+    factory(mod.exports, global.React, global.reactRedux, global.common, global.store, global.ReactDOM, global.reactRouterDom);
     global.UIPage = mod.exports;
   }
-})(this, function (exports, _react, _reactRedux, _common, _store, _reactRouterDom) {
+})(this, function (exports, _react, _reactRedux, _common, _store, _reactDom, _reactRouterDom) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -26,6 +26,8 @@
   var _react2 = _interopRequireDefault(_react);
 
   var _store2 = _interopRequireDefault(_store);
+
+  var _reactDom2 = _interopRequireDefault(_reactDom);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -83,7 +85,7 @@
 
   var page = {
     title: '首页',
-    css: ['/css/index/index.css'],
+    css: [],
     js: []
   };
 
@@ -114,7 +116,7 @@
             _react2.default.createElement(
               'div',
               null,
-              'store'
+              'store123'
             )
           )
         );

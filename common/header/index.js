@@ -13,13 +13,10 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-                <HeaderWrapper className="aaaa">
-                <Logo> </Logo>
-                <Nav>
-                    <NavItem className="left active">简书</NavItem>
-                    <NavItem className="left">首页</NavItem>
-                    <NavItem className="right">登陆</NavItem>
-                    <NavItem className="right"><span className="iconfont">&#xe6e4;</span></NavItem>
+                 
+                 
+                    <div className="left active">简书</div>
+                    <div className="left">首页</div>  
                     {/* <NavSearch
                         className={ this.props.focused ? 'focused' : ''}
                         onFocus = { this.props.handleFocused }
@@ -27,12 +24,11 @@ class Header extends React.Component {
                     ></NavSearch> */}
 
                     <input
-                        className={ this.props.focused ? 'focused' : ''}
+                        className={ this.props.focused ? 'focused' : 'ttt'}
                         onFocus = { this.props.handleFocused }
                         onBlur = { this.props.handleBlur }
                     ></input>
-                </Nav>
-            </HeaderWrapper>
+                 
             </div>
         )
     }

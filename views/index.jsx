@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import {Provider} from 'react-redux';
 import {Header} from '../../build/common/common';
 import store from '../../build/store/store';
-
+import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from "react-router-dom";
 
 const page = {
   title: '首页',
-  css: [
-    '/css/index/index.css'
+  css: [ 
   ],
   js: [ 
   ]
@@ -27,7 +26,7 @@ class Index extends Component {
        
         <div className="browserR">
           <Header />
-          <div>store</div>
+          <div>store123</div>
         </div>
         
       </Provider>
