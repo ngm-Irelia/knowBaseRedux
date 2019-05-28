@@ -6,17 +6,17 @@
  */
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define('UIPage', ['exports', 'react', 'react-redux', '../../build/common/common', '../../build/store/store', 'react-dom', 'react-router-dom'], factory);
+    define('UIPage', ['exports', 'react', 'react-redux', '../../build/common/common', '../../build/store/store'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('react-redux'), require('../../build/common/common'), require('../../build/store/store'), require('react-dom'), require('react-router-dom'));
+    factory(exports, require('react'), require('react-redux'), require('../../build/common/common'), require('../../build/store/store'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.React, global.reactRedux, global.common, global.store, global.ReactDOM, global.reactRouterDom);
+    factory(mod.exports, global.React, global.reactRedux, global.common, global.store);
     global.UIPage = mod.exports;
   }
-})(this, function (exports, _react, _reactRedux, _common, _store, _reactDom, _reactRouterDom) {
+})(this, function (exports, _react, _reactRedux, _common, _store) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -26,8 +26,6 @@
   var _react2 = _interopRequireDefault(_react);
 
   var _store2 = _interopRequireDefault(_store);
-
-  var _reactDom2 = _interopRequireDefault(_reactDom);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -85,7 +83,7 @@
 
   var page = {
     title: '首页',
-    css: [],
+    css: ['/css/index.css'],
     js: []
   };
 
@@ -111,13 +109,159 @@
           { store: _store2.default },
           _react2.default.createElement(
             'div',
-            { className: 'browserR' },
+            null,
             _react2.default.createElement(_common.Header, null),
             _react2.default.createElement(
               'div',
-              null,
-              'store123'
-            )
+              { 'class': 'main-product' },
+              _react2.default.createElement(
+                'div',
+                { 'class': 'layui-container' },
+                _react2.default.createElement(
+                  'p',
+                  { 'class': 'title' },
+                  'NGM\u7684\u7F51\u7AD9',
+                  _react2.default.createElement(
+                    'span',
+                    null,
+                    '\u77E5\u8BC6\u4ECB\u7ECD'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'layui-row layui-col-space25' },
+                  _react2.default.createElement(
+                    'div',
+                    { 'class': 'layui-col-sm6 layui-col-md3' },
+                    _react2.default.createElement(
+                      'div',
+                      { 'class': 'content' },
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement('img', { alt: '1', src: '/image/img/Big_icon1.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                          'p',
+                          { 'class': 'label' },
+                          '\u53EF\u89C6\u5316\u5C55\u793A'
+                        ),
+                        _react2.default.createElement(
+                          'p',
+                          null,
+                          '\u767E\u5EA6\u5730\u56FE\uFF0Carcgis\uFF0CD3.js\uFF0Cecharts\uFF0C\u7B49\u6280\u672F\u7684\u53EF\u89C6\u5316\u5C55\u793A'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'a',
+                        { href: '1' },
+                        '\u67E5\u770B >'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { 'class': 'layui-col-sm6 layui-col-md3 ' },
+                    _react2.default.createElement(
+                      'div',
+                      { 'class': 'content' },
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement('img', { alt: '1', src: '/image/img/Big_icon2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                          'p',
+                          { 'class': 'label' },
+                          'H5\u5C55\u793A'
+                        ),
+                        _react2.default.createElement(
+                          'p',
+                          null,
+                          'H5\u4E00\u4E9B\u6548\u679C\u7684\u5C55\u793A'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'a',
+                        { href: '1' },
+                        '\u67E5\u770B >'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { 'class': 'layui-col-sm6 layui-col-md3 ' },
+                    _react2.default.createElement(
+                      'div',
+                      { 'class': 'content' },
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement('img', { alt: '1', src: '/image/img/Big_icon3.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                          'p',
+                          { 'class': 'label' },
+                          'CSS3\u6548\u679C'
+                        ),
+                        _react2.default.createElement(
+                          'p',
+                          null,
+                          '\u7EAFCSS3\u5B9E\u73B0\u7684\u4E00\u4E9B\u6548\u679C'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'a',
+                        { href: 'www.baidu.com' },
+                        '\u67E5\u770B >'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { 'class': 'layui-col-sm6 layui-col-md3 ' },
+                    _react2.default.createElement(
+                      'div',
+                      { 'class': 'content' },
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement('img', { alt: '1', src: '/image/img/Big_icon4.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                          'p',
+                          { 'class': 'label' },
+                          '\u77E5\u8BC6\u6742\u8BB0'
+                        ),
+                        _react2.default.createElement(
+                          'p',
+                          null,
+                          '\u4F7F\u7528\u4E2D\u6280\u672F\u7684\u8BB0\u5F55~~'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'a',
+                        { href: '1' },
+                        '\u67E5\u770B >'
+                      )
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(_common.Footer, null)
           )
         );
       }

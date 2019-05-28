@@ -941,7 +941,7 @@ var initScriptTmpl = function initScriptTmpl(ctx, props) {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'html',
-        { lang: 'zh-cn' },
+        { lang: 'zh-cmn-Hans' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'head',
             null,
@@ -953,7 +953,7 @@ var initScriptTmpl = function initScriptTmpl(ctx, props) {
                 null,
                 page.title || 'UI Page title'
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'shortcut icon', href: contextPath + '/image/logo.ico' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', href: contextPath + 'js/public/layui/css/layui.css' }),
             res.css && res.css.map(function (css, index) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { key: index, rel: 'stylesheet', href: contextPath + css });
             }),
@@ -969,8 +969,8 @@ var initScriptTmpl = function initScriptTmpl(ctx, props) {
                 { id: PAGE_ROOT, contextPath: contextPath },
                 props.children
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'ttt-div', className: 'ttt-div' }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { type: 'text/javascript', src: contextPath + '/js/public/jquery.js' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { type: 'text/javascript', src: contextPath + '/js/public/layui/layui.js' }),
             res.js && res.js.map(function (js, index) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { key: index, src: contextPath + js });
             }),

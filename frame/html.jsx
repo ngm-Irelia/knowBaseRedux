@@ -37,13 +37,16 @@ export default ( props ) => {
 
 
     return (
-        <html lang="zh-cn">
+        <html lang="zh-cmn-Hans">
         <head>
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
             <title>{ page.title || 'UI Page title' }</title>
-            <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } />
+            {/* <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } /> */}
+
+            <link rel="stylesheet" href={ contextPath + 'js/public/layui/css/layui.css' } />
+            
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ css } /> ) }
         </head>
@@ -53,6 +56,8 @@ export default ( props ) => {
         </Layout>
 
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
+        <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>
+
         { res.js && res.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) } 
         { page.js && page.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) }
         { props.view ? <script src={ `${ contextPath }/views/${ props.view }.${ props.env === 'development' ? 'js' : 'min.js' }` } /> : null }
