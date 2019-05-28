@@ -22,10 +22,10 @@ class Header extends React.Component {
                             <span></span><span></span><span></span>
                         </button>
                         <ul class="layui-nav" lay-filter="">
-                            <li class="layui-nav-item"><a href="product.html">可视化</a></li>
-                            <li class="layui-nav-item"><a href="news.html">H5</a></li>
-                            <li class="layui-nav-item"><a href="case.html">CSS3</a></li>
-                            <li class="layui-nav-item"><a href="about.html">知识</a></li>
+                            <li class="layui-nav-item"><a href="/visualization">可视化</a></li>
+                            <li class="layui-nav-item"><a href="/H5">H5</a></li>
+                            <li class="layui-nav-item"><a href="/CSS3">CSS3</a></li>
+                            <li class="layui-nav-item"><a href="/knowledge">知识</a></li>
                         </ul>
                     </div>
                 </div>
