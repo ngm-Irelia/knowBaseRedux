@@ -12,7 +12,7 @@ const ips       = require( path.join( __dirname, 'config', 'ips.json' ) );
 const paths     = require( path.join( __dirname, 'config', 'paths' ) );
 const context = require( path.join( __dirname, 'config', 'context.json' ) );
 
-const { frame: framePath, views: viewsPath, components: comsPath, bower: bowerPath } = paths;
+const { visualizationPath:visualizationPath,frame: framePath, views: viewsPath, components: comsPath, bower: bowerPath } = paths;
 
 //使用 epm-ui-express-integration ，直接在package.json 中 "epm-ui-express-integration": "^0.1.4",
 const ngmEngine = require( 'ngm-engine' ); //here 换成ngm-engine 应该是手动往modules里面加，服务器中应该也是手动去加

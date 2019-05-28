@@ -15,7 +15,7 @@ router.get('/index', function(req, res, next) {
 
 router.get('/visualization', function(req, res, next) {
     //var html=React.renderToString(Com({name:"dudeyouth"}))   //向组件传参，并使用renderToString方法解析成html字符串
-    res.render('/visualization/visualization', { title: 'index' });  //渲染到界面
+    res.render('visualization/visualization', { title: 'index' });  //渲染到界面
 });
 
 

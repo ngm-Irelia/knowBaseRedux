@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { Header,Footer } from '../../build/common/common';
-import store from '../../build/store/store';
+import { Header,Footer } from '../../../build/common/common';
+import store from '../../../build/store/store';
 
 const page = {
   title: '首页',
