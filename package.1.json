@@ -78,5 +78,17 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "ngm": {
+    "start": "node ./bin/www",
+    "start:dev": "gulp develop",
+    "build": "gulp build",
+    "build:frame": "gulp build-frame",
+    "build:views": "gulp build-views",
+    "build:components": "gulp build-components",
+    "dist": "gulp dist",
+    "watch": "gulp watch",
+    "bower:install": "bower install",
+    "stylus": "gulp convert-stylus"
+  }
 }

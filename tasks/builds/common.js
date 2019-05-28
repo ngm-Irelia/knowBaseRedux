@@ -18,8 +18,7 @@ const { paths: { source: { common: source }, output: { common: output } }, files
 module.exports = ( callback ) => {
 
     console.info( 'Building common' );
-    console.log(source);
-    console.log(output);
+    
     return gulp.src( path.join( source, files.src ) )
       .pipe( plumber() )
       .pipe( webpackStream( tasks.webpack.common, webpack ) )
