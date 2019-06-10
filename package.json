@@ -8,14 +8,19 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "gulp develop",
+    "stylus-white": "gulp convert-stylus --theme white",
+    "prestylus-blue": "npm run stylus-white",
+    "stylus-blue": "gulp convert-stylus --theme blue-white",
+    "prestylus": "npm run stylus-blue",
+    "stylus": "gulp convert-stylus",
+    "prebuild": "npm run stylus",
     "build": "gulp build",
     "build:frame": "gulp build-frame",
     "build:views": "gulp build-views",
     "build:components": "gulp build-components",
     "dist": "gulp dist",
     "watch": "gulp watch",
-    "bower:install": "bower install",
-    "stylus": "gulp convert-stylus"
+    "bower:install": "bower install"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -34,7 +34,8 @@ export default ( props ) => {
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
 
     let data = props.data;
-
+    if ( data && typeof data !== 'object') data = JSON.parse(data);
+    const cssTheme = data.theme ? ( '/' + data.theme ) : '';
 
     return (
         <html lang="zh-cmn-Hans">
@@ -48,7 +49,7 @@ export default ( props ) => {
             <link rel="stylesheet" href={ contextPath + 'js/public/layui/css/layui.css' } />
             
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
-            { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ css } /> ) }
+            { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + '/css' + cssTheme + css.replace(/\/css/, '') } /> ) }
         </head>
         <body>
         <Layout id={ PAGE_ROOT } contextPath={ contextPath }>

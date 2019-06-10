@@ -34,7 +34,10 @@ module.exports = {
             bower: path.resolve( cwd, 'public/bower_components/**' ),
             public: path.resolve( cwd, 'public/js/public/**' ),
             store: path.resolve( cwd, 'store' ),
-            common: path.resolve( cwd, 'common' )
+            common: path.resolve( cwd, 'common' ),
+            fonts: path.resolve( cwd, 'public/fonts' ),
+            stylus: path.resolve( cwd, 'public/stylus/pages' ),
+            themes: path.resolve( cwd, 'public/stylus/themes' )
         },
         output: paths,
         clean: [
