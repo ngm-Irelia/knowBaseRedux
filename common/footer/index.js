@@ -12,10 +12,9 @@ class Footer extends React.Component {
             <div class="footer">
                 <div class="layui-container">
                 <p class="footer-web">
-                    <a href="1">github</a>
-                    <a href="1">博客</a>
-                    <a href="1">邮箱</a>
-                    <a href="1">黑色风格小项目</a>
+                    <a href="https://github.com/ngm-Irelia" target="_black">github</a>
+                    <a href="http://47.94.8.210/" target="_black">博客</a>
+                    <a href="http://47.94.8.210:9527/" target="_black">黑色风格小项目</a>
                     <span><i class="layui-icon layui-icon-home"></i>&nbsp;15275151030@163.com</span>
                 </p>
                 

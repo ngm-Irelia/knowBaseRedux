@@ -6,7 +6,7 @@ import store from '../../../build/store/store';
 const page = {
   title: '首页',
   css: [
-    '/css/index.css'
+    '/css/index/index.css'
   ],
   js: [
   ]

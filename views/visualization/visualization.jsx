@@ -4,9 +4,9 @@ import { Header,Footer } from '../../../build/common/common';
 import store from '../../../build/store/store';
 
 const page = {
-  title: '首页',
+  title: '可视化',
   css: [
-    '/css/index.css'
+    '/css/visualization/visualization.css'
   ],
   js: [
   ]
@@ -14,8 +14,7 @@ const page = {
 
 class Visualization extends Component {
 
-  componentDidMount() {
-    console.log("in index")
+  componentDidMount() { 
   }
 
   render() {
@@ -26,56 +25,42 @@ class Visualization extends Component {
         <div>
           <Header />
 
-          <div class="main-product">
+          <div class="main-case">
             <div class="layui-container">
-              <p class="title">NGM的网站<span>知识介绍</span></p>
-              <div class="layui-row layui-col-space25">
-                <div class="layui-col-sm6 layui-col-md3">
-                  <div class="content">
-                    <div><img alt="1" src="/image/img/Big_icon1.png" /></div>
-                    <div>
-                      <p class="label">可视化展示</p>
-                      <p>百度地图，arcgis，D3.js，echarts，等技术的可视化展示</p>
-                    </div>
-                    <a href="1">查看 ></a>
-                  </div>
+              <div class="layui-row">
+                <div class="layui-inline content">
+                  <div class="layui-inline case-img"><a href="/bmap" target="_black"><img src="/image/img/case1.jpg" /></a> </div>
+                  <p class="show-title">百度地图</p>
+                  <p class="show-detail">包括地图上的一些分析，交互操作！！！</p>
                 </div>
-                <div class="layui-col-sm6 layui-col-md3 ">
-                  <div class="content">
-                    <div><img alt="1" src="/image/img/Big_icon2.png" /></div>
-                    <div>
-                      <p class="label">H5展示</p>
-                      <p>H5一些效果的展示</p>
-                    </div>
-                    <a href="1">查看 ></a>
-                  </div>
+                <div class="layui-inline content even center">
+                  <div class="layui-inline case-img"><img src="/image/img/case2.jpg" /> </div>
+                  <p class="show-title">arcgis</p>
+                  <p class="show-detail">包括地图上的一些分析，交互操作！！！</p>
                 </div>
-                <div class="layui-col-sm6 layui-col-md3 ">
-                  <div class="content">
-                    <div><img alt="1" src="/image/img/Big_icon3.png" /></div>
-                    <div>
-                      <p class="label">CSS3效果</p>
-                      <p>纯CSS3实现的一些效果</p>
-                    </div>
-                    <a href="www.baidu.com">查看 ></a>
-                  </div>
+                <div class="layui-inline content">
+                  <div class="layui-inline case-img"><img src="/image/img/case3.jpg" /> </div>
+                  <p class="show-title">D3关系分析</p>
+                  <p class="show-detail">实体关系分析，包括搜索，时间轴等！！！</p>
                 </div>
-                <div class="layui-col-sm6 layui-col-md3 ">
-                  <div class="content">
-                    <div><img alt="1" src="/image/img/Big_icon4.png" /></div>
-                    <div>
-                      <p class="label">知识杂记</p>
-                      <p>使用中技术的记录~~</p>
-                    </div>
-                    <a href='1'>查看 ></a>
-                  </div>
+                <div class="layui-inline content even">
+                  <div class="layui-inline case-img"><a href="/d3show" target="_black"> <img src="/image/img/case4.jpg" /> </a> </div>
+                  <p class="show-title">D3的可视化动画</p>
+                  <p class="show-detail">各种表格的切换和动画</p>
                 </div>
+                <div class="layui-inline content center">
+                  <div class="layui-inline case-img"> <a href="/echarts" target="_black"><img src="/image/img/case5.jpg" /> </a></div>
+                  <p class="show-title">echarts</p>
+                  <p class="show-detail">包括地图上的一些分析，交互操作！！！</p>
+                </div>
+                
               </div>
+               
             </div>
           </div>
-          
 
-          
+
+
           <Footer />
 
         </div>

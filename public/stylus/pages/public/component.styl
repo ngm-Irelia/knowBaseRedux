@@ -1327,3 +1327,139 @@ input::-webkit-input-placeholder {
   outline: 0;
   border: 0;
 }
+
+
+
+
+
+
+
+body{background: #fff;}
+
+/** 首页 */
+
+/*导航部分*/
+.nav{width: 100%; height: 80px; box-shadow: 0 3px 3px 0 #CCC; background:rgba(242,242,242,.2); position: fixed; left: 0; top: 0; z-index: 999; overflow: hidden; transition: 0.3s}
+.nav.index{ box-shadow: 0 0 0 0 rgba(0,0,0,0.05);}
+.nav.scroll{ background: #FFF; box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05); transition: 0.3s}
+.nav .layui-container{position: relative; transition: all 400ms ease-out;}
+.nav .nav-logo{height: 100%; position: absolute; top: 0; left: 15px; line-height: 80px;}
+.nav .nav-list{display: inline-block; height: 80px;}
+.nav .nav-list button{width: 25px; height: 30px; position: absolute; top: 30px; right: 15px; background-color: transparent; border: none; outline: none; cursor: pointer;}
+.nav .nav-list button span{display: block; width: 25px; height: 2px; background: #2db5a3; margin-bottom: 6px; transition: 0.5s;}
+.nav .nav-list button span.spa1{transform: rotate(45deg);}
+.nav .nav-list button span.spa3{transform: rotate(-45deg) translate(5px,-5px);}
+.nav .layui-nav{width: 100%; position: absolute; top: 80px; right: 0; color: #000; background: transparent;}
+.nav .layui-nav .layui-nav-item{display: block; line-height: 60px;}
+.nav .layui-nav *{font-size: 18px;}
+.nav .layui-nav .layui-nav-item a{padding: 0 0; color: #000;}
+.nav .layui-nav-bar,
+.nav .layui-nav .layui-this:after{height: 2px; background-color: #2db5a3;}
+.nav .layui-nav .layui-this a,
+.nav .layui-nav .layui-nav-item a:hover{color: #2db5a3;}
+
+
+/*主体—产品*/
+.main-product{height: calc(100%); background: #fff; padding: 80px 0 0 0;}
+.main-product p{font-size: 16px; color: #ababab; line-height: 28px;}
+.main-product p.title,
+.main-service p.title{color: #484848; font-size: 24px; text-align: center; line-height: 160px;}
+.main-product p.title span,
+.main-service p.title span{color: #2db5a3;}
+.main-product .content{border: 1px solid #DEDEDE; padding: 30px 36px 0 36px; text-align: center; transition: 0.3s; height: 300px;}
+.main-product .content p.label{font-size: 18px; color: #939393; line-height: 46px; padding-top: 6px;}
+.main-product .content a{font-size: 18px; color: #a1d8cb; line-height: 68px;}
+.main-product .content:hover{box-shadow: 0 0 3px 3px #EEE; transition: 0.3s;}
+.main-product .content img{transition: 2s;}
+.main-product .content img:hover{transform: rotateY(180deg);}
+ 
+/*底部*/
+.footer{ background: #5e6664; position: fixed;bottom: 0px;left: 0px;right: 0px;  height: 100px;}
+.footer .footer-web a,.footer .footer-web span {color: #a5aaa9; line-height: 100px; margin-right: 20px; transition: 0.3s;}
+.footer .footer-web a:hover{color: #dce1e0; transition: 0.3s;}
+
+
+
+
+
+
+ 
+@media screen and (max-width: 480px){
+  .main-service .content .content-right{padding: 10px 10px 0 10px;}
+  .main-service .content .content-right p{line-height: 24px;}
+  .main-news .content .news-panel p.read-push{font-size: 12px;}
+  .main-case .content{padding-top: 60px;}
+  .main-case .content p.lable{padding-top: 10px; font-size: 18px; line-height: 48px;}
+  .main-case .content p{font-size: 12px; line-height: 20px; color: #505050;}
+  .main-about ul.aboutab{padding: 70px 0;}
+  .main-about ul.aboutab li{padding: 0 15px; font-size: 16px; box-sizing: border-box;}
+  .main-about .tabIntro .content .img{width: 100%;}
+  .main-about .tabIntro .content .panel{width: 100%;}
+  .main-about .tabIntro .content .panel.p_block{display: none;}
+  .main-about .tabIntro .p_hidden{display: block;}
+  .main-news #newsPage .layui-laypage a,.main-news #newsPage .layui-laypage span
+  ,.main-case #casePage .layui-laypage a,.main-case #casePage .layui-laypage span{padding: 0 12px; font-size: 14px; line-height: 30px; height: 30px; margin-right: 4px;}
+}
+/*小屏幕*/
+@media screen and (min-width: 768px){
+  .nav{max-height: 80px;}
+
+  .nav .nav-list button{display: none;}
+  .nav .layui-nav{width: auto; position: absolute; top: 0; padding: 0 5px; border-radius: 0; margin: 0;}
+  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 53px; line-height: 80px;}
+  .main-product p.title
+  ,.main-service p.title{font-size: 36px; line-height: 216px;}
+  .main.product .content .content-img{text-align: left;}
+  .main-news .content .news-panel strong a{font-size: 20px; line-height: 30px;}
+  .main-news .content .news-panel p.read-push{padding-top: 0; position: absolute; bottom: 40px;}
+  .main-newsdate .pushtime{line-height: 142px;}
+  .main-case .content{width: 45%;}
+  .main-case .content.even{margin-left: 9%;}
+  .main-about ul.aboutab li{padding: 0 32px; font-size: 24px; margin-left: 30px; line-height: 50px;}
+  .main-about .tabIntro .content p{padding: 0 30px; font-size: 18px; line-height: 30px;}
+  .main-about .tabJob .content p{font-size: 24px; line-height: 50px;}
+  .main-about .tabJob .content p.title{font-size: 30px; line-height: 90px;}
+  .main-about .tabJob .content ol li{font-size: 20px; line-height: 60px;}
+  .main-about .tabCour .timeline:before{left: 50%;}
+  .main-about .tabCour .timeline li{min-height: 195px; padding-top: 95px;}
+  .main-about .tabCour .timeline li .cour-img{left: 50%; margin-left: -97.5px; width: 195px;}
+  .main-about .tabCour .timeline li .cour-panel{padding-top: 55px; padding-left: 0;}
+  .main-about .tabCour .timeline li.odd .cour-panel{text-align: right;}
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .main.product .content div.right{padding-left: 20px;}
+  .nav .layui-nav .layui-nav-item{margin:0 33px;}
+  .main-service .content .content-right{padding: 10px 10px 0 15px;}
+  .main-service .content .content-right span{margin-bottom: 20px;}
+  .main-service .content .content-right p{line-height: 28px;}
+  .main.product .content .label{line-height: 40px; margin-top: 0;}
+  .main.product .content .detail{padding-bottom: 10px;}
+}
+/*大屏幕*/
+@media screen and (min-width: 992px){
+  .main.product .content{padding: 100px 0;}
+  .main.product .content div.right{padding-left: 0;}
+  .main-news .content .news-img{width: 20%;}
+  .main-news .content .news-panel{width: 80%;}
+  .main-case .content{width: 31%;}
+  .main-case .content.even{margin-left: 0;}
+  .main-case .content.center{margin-right: 3%; margin-left: 3%;}
+  .main-about .tabIntro .content p{padding: 0 50px; font-size: 20px; line-height: 40px;}
+}
+/*超大屏幕*/
+@media screen and (min-width: 1200px) {
+  .main-news .content .news-img{width: 35%;}
+  .main-news .content .news-panel{width: 65%;}
+  .main-news .content:nth-child(odd){padding-right: 20px;}
+  .main-news .content:nth-child(even){padding-left: 20px;}
+  .main-about .tabCour .timeline li .cour-panel{padding-left: 50px;}
+  .main-about .tabCour .timeline li.odd .cour-panel{padding-left: 0; padding-right: 50px;}
+}
+@media screen and (min-width: 1300px) {
+  .layui-container{width: 1200px; padding: 0;}
+  .main-about .tabJob .content:last-child{margin-bottom: 180px;}
+  .nav .nav-logo{position: absolute; top: 0; left: 0;}
+  .layui-col-space80{margin: -40px;}
+  .layui-col-space80>*{padding: 40px;}
+}
+

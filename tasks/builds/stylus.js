@@ -22,7 +22,7 @@ module.exports = (callback) => {
    */
   let knownOptions = {
     string: 'theme',
-    default: {theme: 'black'} //默认为黑色
+    default: {theme: 'white'} //默认为黑色  black
   };
 
   let options = minimist(process.argv.slice(2), knownOptions);

@@ -12,7 +12,7 @@ const page = {
   ]
 };
 
-class CSS3 extends Component {
+class Detail extends Component {
 
   componentDidMount() {
     console.log("in index")
@@ -25,8 +25,7 @@ class CSS3 extends Component {
 
         <div>
           <Header />
-
-          CSS3
+ 
           
           <Footer />
 
@@ -38,6 +37,6 @@ class CSS3 extends Component {
   }
 }
 
-CSS3.UIPage = page;
+Detail.UIPage = page;
 
-export default CSS3;
+export default Detail;

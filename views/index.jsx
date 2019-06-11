@@ -37,7 +37,7 @@ class Index extends Component {
                       <p class="label">可视化展示</p>
                       <p>百度地图，arcgis，D3.js，echarts，等技术的可视化展示</p>
                     </div>
-                    <a href="1">查看 ></a>
+                    <a href="/visualization">查看 ></a>
                   </div>
                 </div>
                 <div class="layui-col-sm6 layui-col-md3 ">
@@ -47,7 +47,7 @@ class Index extends Component {
                       <p class="label">H5展示</p>
                       <p>H5一些效果的展示</p>
                     </div>
-                    <a href="1">查看 ></a>
+                    <a href="/H5">查看 ></a>
                   </div>
                 </div>
                 <div class="layui-col-sm6 layui-col-md3 ">
@@ -62,12 +62,12 @@ class Index extends Component {
                 </div>
                 <div class="layui-col-sm6 layui-col-md3 ">
                   <div class="content">
-                    <div><img alt="1" src="/image/img/Big_icon4.png" /></div>
+                    <div><img alt="/CSS3" src="/image/img/Big_icon4.png" /></div>
                     <div>
                       <p class="label">知识杂记</p>
                       <p>使用中技术的记录~~</p>
                     </div>
-                    <a href='1'>查看 ></a>
+                    <a href='/knowledge'>查看 ></a>
                   </div>
                 </div>
               </div>

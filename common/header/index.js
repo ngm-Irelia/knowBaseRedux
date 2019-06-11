@@ -13,7 +13,7 @@ class Header extends React.Component {
                 <div class="layui-container">
 
                     <div class="nav-logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="image/favicon.ico" alt="NGM" />
                         </a>
                     </div>
