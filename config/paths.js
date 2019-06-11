@@ -11,6 +11,8 @@ module.exports = {
   image: path.resolve( cwd, 'build', 'public/image' ),
   bower: path.resolve( cwd, 'build', 'public/bower_components' ),
   public: path.resolve( cwd, 'build', 'public/js/public' ),
+  fonts: path.resolve( cwd, 'build', 'public/fonts/' ),
+  stylus: path.resolve( cwd, 'public', 'css' ),
   store: path.resolve( cwd, 'build', 'store' ),
   common: path.resolve( cwd, 'build', 'common' )
 };

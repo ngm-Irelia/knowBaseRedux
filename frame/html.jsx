@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
-import {Provider} from 'react-redux';
 
 const PAGE_ROOT = 'ngm-base-page-div';
 
@@ -19,7 +18,7 @@ const initScriptTmpl = ( ctx, props ) => `
     var ngmg = ${ props };
     var ngmcontext = ${ ctx };
     var Magicube = ${ props };
-    //ReactDOM.render( React.createElement( Page, ${ props } ), container );
+    //ReactDOM.render( React.createElement( Page, ${ props } ), container );//使用了redux，不能加这个
   }
 `.trim();
 
