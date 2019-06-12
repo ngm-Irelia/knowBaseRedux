@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 //import {Header } from '../../build/components/knowBase';
-import { Header,Footer } from '../../../build/common/common';
+import { Header } from '../../../build/common/common';
 import store from '../../../build/store/store';
 
 const page = {

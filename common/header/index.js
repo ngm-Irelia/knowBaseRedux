@@ -8,37 +8,22 @@ import { actionCreators } from './store';
 class Header extends React.Component {
 
     render() {
+        
+        //const {headerList} = this.state;
+              
         return (
-            <div class="nav index">
-                <div class="layui-container">
-
-                    <div class="nav-logo">
-                        <a href="/">
-                            <img src="image/favicon.ico" alt="NGM" />
-                        </a>
-                    </div>
-                    <div class="nav-list">
-                        <button>
-                            <span></span><span></span><span></span>
-                        </button>
-                        <ul class="layui-nav" lay-filter="">
-                            <li class="layui-nav-item"><a href="/visualization">可视化</a></li>
-                            <li class="layui-nav-item"><a href="/H5">H5</a></li>
-                            <li class="layui-nav-item"><a href="/CSS3">CSS3</a></li>
-                            <li class="layui-nav-item"><a href="/knowledge">知识</a></li>
-                        </ul>
-                    </div>
-                </div>
-                {/* <input
-                className={ this.props.focused ? 'focused' : 'ttt'}
-                onFocus = { this.props.handleFocused }
-                onBlur = { this.props.handleBlur }
-            ></input> */}
+            <div className="header">
+              <div>
+                <div className="header_logo" name={ this.props.focused }></div>
+                <div className="header_ryxq" ref={ a => this.myRef = a} onClick={ this.props.handleGoPage }>眼中有日月星辰</div>
+              </div>
+              
+              <div className="header_list"> <a href="/knowledge" >知识</a></div>
+              <div className="header_list"> <a href="/H5" >H5</a></div>
+              <div className="header_list"> <a href="/CSS3" >CSS3</a></div>
+              <div className="header_list"> <a href="/visualization" >可视化</a></div>
+              <div className="header_list"> <a href="/index" >首页</a></div>
             </div>
-
-
-
-
         )
     }
 }
@@ -53,6 +38,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 
     return {
+        handleGoPage(e,a){
+            console.log(" in handleGoPage");
+            console.log(this);
+            console.log(e);
+            console.log(a);
+        },
         handleFocused() {
             const action = actionCreators.setSearchFocus();
             dispatch(action);  //其实就是store.dispatch()
