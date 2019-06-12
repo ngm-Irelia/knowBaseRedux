@@ -9,13 +9,13 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <div class="footer">
-                <div class="layui-container">
-                <p class="footer-web">
+            <div className="footer">
+                <div className="layui-container">
+                <p className="footer-web">
                     <a href="https://github.com/ngm-Irelia" target="_black">github</a>
                     <a href="http://47.94.8.210/" target="_black">博客</a>
                     <a href="http://47.94.8.210:9527/" target="_black">黑色风格小项目</a>
-                    <span><i class="layui-icon layui-icon-home"></i>&nbsp;15275151030@163.com</span>
+                    <span><i className="layui-icon layui-icon-home"></i>&nbsp;15275151030@163.com</span>
                 </p>
                 
                 </div>
@@ -25,29 +25,22 @@ class Footer extends React.Component {
 }
 
 //把store中的数据，映射到props
-const mapStateToProps = (state) => {
+const mapStateToPropsF = (state) => {
     return {
         focused: state.header.focused //因为使用combineReducers，路径发生变化，需要加上.header
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToPropsF = (dispatch) => {
 
     return {
         handleFocused() {
-            const action = actionCreators.setSearchFocus();
-            dispatch(action);  //其实就是store.dispatch()
-
+             
             console.log(this)
             //发送请求接口
-            const listAction = actionCreators.getTodoList();
-            dispatch(listAction);
-        },
-        handleBlur() {
-            const action = actionCreators.setSearchBlur();
-            dispatch(action);
+            
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Footer);
+export default connect(mapStateToPropsF, mapDispatchToPropsF)(Footer);

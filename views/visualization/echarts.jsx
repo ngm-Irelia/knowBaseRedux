@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-//import {Header } from '../../build/components/knowBase';
+//import {Header } from '../../../build/components/knowBase';
 import { Header } from '../../../build/common/common';
 import store from '../../../build/store/store';
 
@@ -18,6 +18,11 @@ const page = {
 };
 
 class Echarts extends React.Component {
+
+    componentDidMount(){
+      console.log("Echarts");
+    }
+
     render() {
       return (
         <Provider store={store}>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
-
+import { Provider } from 'react-redux';
+import store from '../build/store/store';
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
@@ -18,7 +19,7 @@ const initScriptTmpl = ( ctx, props ) => `
     var ngmg = ${ props };
     var ngmcontext = ${ ctx };
     var Magicube = ${ props };
-    //ReactDOM.render( React.createElement( Page, ${ props } ), container );//使用了redux，不能加这个
+    ReactDOM.render( React.createElement( Page, ${ props } ), container );
   }
 `.trim();
 
@@ -28,8 +29,8 @@ export default ( props ) => {
     const contextPath = context.contextPath;
     const page = props.component.UIPage || {};
     
-    console.log("props.data -------------------------   ");
-    console.log(props.data);
+    console.log("props -------------------------   ");
+    console.log(props);
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
 
     let data = props.data;
@@ -52,7 +53,9 @@ export default ( props ) => {
         </head>
         <body>
         <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
+          <Provider store={store}>
             { props.children }
+          </Provider> 
         </Layout>
 
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
