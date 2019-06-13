@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
+/* import { Provider } from 'react-redux';
+import store from '../build/store/store'; */
 import { Provider } from 'react-redux';
-import store from '../build/store/store';
 
-import { Header } from '../build/common/common';
+console.log(" *****************html Provider Provider  ***********");
+console.log(Provider);
+//import { Header } from '../build/common/common';
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
@@ -54,14 +57,11 @@ export default ( props ) => {
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + '/css' + cssTheme + css.replace(/\/css/, '') } /> ) }
         </head>
         <body>
-        <Provider store={store}>
-          <div>
-            <Header />
+         
             <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
               { props.children }
             </Layout>
-          </div>
-        </Provider> 
+         
         
 
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>

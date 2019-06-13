@@ -1,12 +1,18 @@
 import React from 'react';
 
 //import {Header } from '../../../build/components/knowBase';
-/* import { Header } from '../../../build/common/common';
-import { Provider } from 'react-redux'; */
+import { Header } from '../../../build/common/common';
+import { Provider } from 'react-redux';
+
 import store from '../../../build/store/store';
 console.log(" ***************** store ***********");
 console.log(store);
+console.log(" ***************** Provider ***********");
+console.log(Provider)
+console.log(" ***************** Provider end***********");
 
+const Providers = Provider;
+const stores = store;
 const page = {
     title: 'echarts',
     css: [
@@ -37,10 +43,10 @@ class Echarts extends React.Component {
 
     render() {
       return (
-        
-
+        <Providers store={stores}>
           <div>
             
+            <Header />
             
             <div className="org-base">
         
@@ -135,8 +141,14 @@ class Echarts extends React.Component {
           </div>
       
 
+
+        </Providers>
+          
        
-        
+           
+       
+
+         
       );
     }
 }
