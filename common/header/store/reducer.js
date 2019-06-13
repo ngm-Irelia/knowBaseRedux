@@ -1,7 +1,8 @@
 import { SEARCH_FOCUS, SEARCH_BLUR, INIT_LIST_ACTION } from './actionTypes'
 
 const defaultState = {
-  focused:true
+  focused:true,
+  storeName:'ngmstore'
 };
 
 export default (state=defaultState, action) => {

@@ -44,9 +44,16 @@ class Header extends Component {
         }
     }
 
-    componentDidMount(){
-
-    }
+    componentWillMount (){
+        console.log("component Header componentWillMount *********** ")
+      }
+      componentDidMount(){
+          console.log("component Header Echarts componentDidMount ******** ")
+      }
+    
+      componentWillReceiveProps(){
+        console.log("component Header Echarts componentWillReceiveProps ************** ")
+      }
 
     //返回地图
     handleGoMap(name) {

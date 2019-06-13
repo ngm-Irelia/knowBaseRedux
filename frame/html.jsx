@@ -3,11 +3,13 @@ import Layout from './layouts/default';
 import resources from './config/resources.json';
 import { Provider } from 'react-redux';
 import store from '../build/store/store';
+
+//import { Header } from '../build/components/knowBase';
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
   if ( window.UIPage ) {
-    console.log("props ++++++++++++++++aaaaa++++++++++++++   ");
+    console.log("props ++++++++++++++++++++++++++++++   ");
     console.log(${ props });
     console.log(${ ctx });
     UIPage.context = ${ ctx };
@@ -52,11 +54,15 @@ export default ( props ) => {
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + '/css' + cssTheme + css.replace(/\/css/, '') } /> ) }
         </head>
         <body>
-        <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
-          <Provider store={store}>
-            { props.children }
-          </Provider> 
-        </Layout>
+        <Provider store={store}>
+          <div>
+            
+            <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
+              { props.children }
+            </Layout>
+          </div>
+        </Provider> 
+        
 
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
         <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>

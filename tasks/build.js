@@ -34,6 +34,6 @@ module.exports = ( callback ) => {
 
     runSequence( [  'build-components', 'build-views', 'build-frame',
         'build-javascript', 'build-css', 'build-image','build-bower',
-        'build-public', 'build-store', 'build-common' ], callback );
+        'build-public', 'build-common', 'build-store' ], callback );
 
 };

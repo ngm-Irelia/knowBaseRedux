@@ -1,83 +1,71 @@
-/**
- * Created by ngm on 2018/4/25.
- */
-import React,{Component} from 'react';
-//import he from '../public/css/component/header.css';
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            headerList : [
-                {
-                  name:"CSS3",
-                  value:"CSS3",
-                  img:"car.svg",
-                },
-                {
-                    name:"H5",
-                    value:"H5",
-                    img:"car.svg",
-                },
-                {
-                    name:"map",
-                    value:"map",
-                    img:"car.svg",
-                },
-                {
-                    name:"js",
-                    value:"js",
-                    img:"car.svg",
-                },
-                {
-                    name:"D3",
-                    value:"D3",
-                    img:"car.svg",
-                },
-                {
-                    name:"首页",
-                    value:"index",
-                    img:"car.svg",
-                }
-            ]
-        }
+
+import React from 'react';
+import { connect } from 'react-redux';
+
+import { actionCreators } from './store';
+
+//无状态组件性能更好
+
+class Header extends React.Component {
+
+    componentWillMount() {
+        console.log("hahaha Header componentWillMount ------ ++++++++++++++++++++++++ ")
+    }
+    componentDidMount() {
+        console.log("hahaha Header componentDidMount -------- ++++++++++++++++++++++++")
     }
 
-    componentDidMount(){
-
-    }
-
-    //返回地图
-    handleGoMap(name) {
-         
-    }
-
-    testClick(e){
-        console.log("in testClick...");
-        console.log(this.myRef)
+    componentWillReceiveProps() {
+        console.log("hahaha Header componentWillReceiveProps -------- ++++++++++++++++++++++++")
     }
 
     render() {
-        const {headerList} = this.state;
+
+        //const {headerList} = this.state;
+
         return (
             <div className="header">
-              <div>
-                <div className="header_logo"></div>
-                <div className="header_ryxq" ref={ a => this.myRef = a} onClick={this.testClick.bind(this)}>眼中有日月星辰</div>
-              </div>
+                <div>
+                    <div className="header_logo" name={this.props.focused ? "name" : 'false'} test={ this.props.storeName }></div>
+                    <div className="header_ryxq" onClick={this.props.handleFocused}>眼中有日月星辰</div>
+                </div>
 
-              {
-                headerList.map( (hl, index) => {
-                  return (
-                      <div className="header_list" key={index} onClick={this.handleGoMap.bind(this,hl.value)}> { hl.name } </div>
-                  )
-                })
-              }
+                <div className="header_list"> <a href="/knowledge" >知识</a></div>
+                <div className="header_list"> <a href="/H5" >H5</a></div>
+                <div className="header_list"> <a href="/CSS3" >CSS3</a></div>
+                <div className="header_list"> <a href="/visualization" >可视化</a></div>
+                <div className="header_list"> <a href="/index" >首页</a></div>
             </div>
-        );
+        )
     }
 }
 
-export default Header;
-export { Header };
+//把store中的数据，映射到props
+const mapStateToProps = (state) => {
+    return {
+        focused: state.header.focused, //因为使用combineReducers，路径发生变化，需要加上.header
+        storeName: state.header.storeName
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        handleFocused() {
+            const action = actionCreators.setSearchFocus();
+            dispatch(action);  //其实就是store.dispatch()
+
+            console.log(this)
+            //发送请求接口
+            const listAction = actionCreators.getTodoList();
+            dispatch(listAction);
+        },
+        handleBlur() {
+            const action = actionCreators.setSearchBlur();
+            dispatch(action);
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

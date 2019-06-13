@@ -256,6 +256,8 @@ const nodemonTask = {
         outputConfig.frame + '/*',
         outputConfig.views + '/*',
         outputConfig.components + '/*',
+        outputConfig.common + '/*',
+        outputConfig.store + '/*',
         'public/*',
         'tasks/*',
         'gulpfile.js'
