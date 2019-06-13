@@ -12,7 +12,7 @@ const ips     = require( path.join( __dirname, 'config', 'ips.json' ) );
 const paths   = require( path.join( __dirname, 'config', 'paths' ) );
 const context = require( path.join( __dirname, 'config', 'context.json' ) );
 
-const { frame: framePath, views: viewsPath, components: comsPath, bower: bowerPath,common:commonPath } = paths;
+const { frame: framePath, views: viewsPath, components: comsPath, bower: bowerPath,common:commonPath,store:storePath } = paths;
 
 
 const ngmEngine = require( 'ngm-engine' ); //here 换成ngm-engine 应该是手动往modules里面加，服务器中应该也是手动去加
@@ -64,6 +64,7 @@ app.use('/', index);
 app.use( '/views', express.static( viewsPath ) );
 app.use( '/components', express.static( comsPath ) );
 app.use( '/common', express.static( commonPath ) );
+app.use( '/store', express.static( storePath ) );
 app.use( '/bower_components', express.static( bowerPath) );
 
 // catch 404 and forward to error handler
