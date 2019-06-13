@@ -1,8 +1,11 @@
 import React from 'react';
 
 //import {Header } from '../../../build/components/knowBase';
-import { Header } from '../../../build/common/common';
-
+/* import { Header } from '../../../build/common/common';
+import { Provider } from 'react-redux'; */
+import store from '../../../build/store/store';
+console.log(" ***************** store ***********");
+console.log(store);
 
 const page = {
     title: 'echarts',
@@ -35,8 +38,9 @@ class Echarts extends React.Component {
     render() {
       return (
         
+
           <div>
-            <Header />
+            
             
             <div className="org-base">
         
@@ -131,6 +135,7 @@ class Echarts extends React.Component {
           </div>
       
 
+       
         
       );
     }

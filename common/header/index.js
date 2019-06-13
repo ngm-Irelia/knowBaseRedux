@@ -3,43 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { actionCreators } from './store';
-
-//无状态组件性能更好
-
-class Header extends React.Component {
-
-    componentWillMount() {
-        console.log("hahaha Header componentWillMount ------ ++++++++++++++++++++++++ ")
-    }
-    componentDidMount() {
-        console.log("hahaha Header componentDidMount -------- ++++++++++++++++++++++++")
-    }
-
-    componentWillReceiveProps() {
-        console.log("hahaha Header componentWillReceiveProps -------- ++++++++++++++++++++++++")
-    }
-
-    render() {
-
-        //const {headerList} = this.state;
-
-        return (
-            <div className="header">
-                <div>
-                    <div className="header_logo" name={this.props.focused ? "name" : 'false'} test={ this.props.storeName }></div>
-                    <div className="header_ryxq" onClick={this.props.handleFocused}>眼中有日月星辰</div>
-                </div>
-
-                <div className="header_list"> <a href="/knowledge" >知识</a></div>
-                <div className="header_list"> <a href="/H5" >H5</a></div>
-                <div className="header_list"> <a href="/CSS3" >CSS3</a></div>
-                <div className="header_list"> <a href="/visualization" >可视化</a></div>
-                <div className="header_list"> <a href="/index" >首页</a></div>
-            </div>
-        )
-    }
-}
+import { actionCreators } from './store/index';
 
 //把store中的数据，映射到props
 const mapStateToProps = (state) => {
@@ -67,5 +31,30 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 }
+
+//无状态组件性能更好
+
+class Header extends React.Component {
+
+    render() {
+
+        return (
+            <div className="header">
+                <div>
+                    <div className="header_logo" name={this.props.focused ? "name" : 'false'} test={ this.props.storeName }></div>
+                    <div className="header_ryxq" onClick={this.props.handleFocused}>眼中有日月星辰</div>
+                </div>
+
+                <div className="header_list"> <a href="/knowledge" >知识</a></div>
+                <div className="header_list"> <a href="/H5" >H5</a></div>
+                <div className="header_list"> <a href="/CSS3" >CSS3</a></div>
+                <div className="header_list"> <a href="/visualization" >可视化</a></div>
+                <div className="header_list"> <a href="/index" >首页</a></div>
+            </div>
+        )
+    }
+}
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

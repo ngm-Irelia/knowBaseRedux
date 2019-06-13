@@ -4,7 +4,7 @@ import resources from './config/resources.json';
 import { Provider } from 'react-redux';
 import store from '../build/store/store';
 
-//import { Header } from '../build/components/knowBase';
+import { Header } from '../build/common/common';
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
@@ -56,7 +56,7 @@ export default ( props ) => {
         <body>
         <Provider store={store}>
           <div>
-            
+            <Header />
             <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
               { props.children }
             </Layout>

@@ -3,7 +3,7 @@
  */
 
 import Header from './header/index';
-import store from './store/index';
+
 export {
-    Header,store
+    Header
 };
