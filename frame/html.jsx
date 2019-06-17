@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
-/* import { Provider } from 'react-redux';
-import store from '../build/store/store'; */
 import { Provider } from 'react-redux';
+import store from '../build/store/store'; 
+import ReactDOM from 'react-dom';
 
 console.log(" *****************html Provider Provider  ***********");
 console.log(Provider);
-//import { Header } from '../build/common/common';
+import { Header } from '../build/common/common';
 const PAGE_ROOT = 'ngm-base-page-div';
 
 const initScriptTmpl = ( ctx, props ) => `
@@ -28,6 +28,30 @@ const initScriptTmpl = ( ctx, props ) => `
   }
 `.trim();
 
+function renderPro(dombase,props,store) {
+  ReactDOM.render( dombase, document.getElementById("ngm-base-page-div") )
+    /* return (
+      `let Page = UIPage.default || UIPage;
+      let dom = React.createElement( Page, ${props});
+      console.log(dom);
+      ReactDOM.render(
+          <Provider store=${store}>
+          <div>
+            <Header />
+            dom  
+          </div>
+            
+          </Provider>,
+        document.getElementById("ngm-base-page-div")
+      )`
+    ); */
+   
+  
+  
+}
+
+
+
 export default ( props ) => {
     const res =  resources[ props.env ] || {};
     const context = props.context;
@@ -35,8 +59,16 @@ export default ( props ) => {
     const page = props.component.UIPage || {};
     
     console.log("props -------------------------   ");
-    console.log(props);
+    console.log(props, store);
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
+
+    let dombase = <Provider store={store}>
+      <div>
+        <Header />
+        dom  
+      </div>
+    </Provider>;
+    //let renderProHtml = renderPro(dombase,props.data);
 
     let data = props.data;
     if ( data && typeof data !== 'object') data = JSON.parse(data);
@@ -71,7 +103,26 @@ export default ( props ) => {
         { page.js && page.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) }
         { props.view ? <script src={ `${ contextPath }/views/${ props.view }.${ props.env === 'development' ? 'js' : 'min.js' }` } /> : null }
         <script dangerouslySetInnerHTML={ { __html: initScript } } />
-
+        <script dangerouslySetInnerHTML={ { __html: `console.log("hahah啊哈哈哈哈哈哈 ")` } } /> 
+        <script >
+          
+          console.log(window);
+          console.log(window.document);
+          let tt = `ngm-base-page-div`;
+          console.log(tt);
+          window.aaa = window.document.getElementById(tt);
+          console.log(aaa);
+          ReactDOM.render(
+            
+            <Provider store={store}>
+            <div>
+              dom  
+            </div>
+            </Provider>,
+            window.aaa
+          )
+          
+        </script>
         {/* <script type="module" src={ `${ contextPath }/js/modules/use.js` } /> */}
         </body>
         </html>
