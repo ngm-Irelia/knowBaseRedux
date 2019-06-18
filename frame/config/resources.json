@@ -4,7 +4,7 @@
 
     ],
     "js": [
-      "https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js",
+      "/js/public/babel-polyfill/polyfill.js",
       "/bower_components/fetch/fetch.js",
       "/bower_components/react/react.js",
       "/bower_components/react/react-dom.js",
@@ -17,7 +17,7 @@
     "css": [
     ],
     "js": [
-      "https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js",
+      "/js/public/babel-polyfill/polyfill.min.js",
       "/bower_components/fetch/fetch.js",
       "/bower_components/react/react.min.js",
       "/bower_components/react/react-dom.min.js",
@@ -30,7 +30,7 @@
     "css": [
     ],
     "js": [
-      "https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js",
+      "/js/public/babel-polyfill/polyfill.min.js",
       "/bower_components/fetch/fetch.js",
       "/bower_components/react/react.min.js",
       "/bower_components/react/react-dom.min.js",

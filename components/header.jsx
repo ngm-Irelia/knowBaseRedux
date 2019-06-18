@@ -47,7 +47,7 @@ class Header extends Component {
 
     //返回地图
     handleGoMap(name) {
-         
+        window.location.href = "/"+name;
     }
 
     testClick(e){
