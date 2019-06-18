@@ -1,7 +1,7 @@
 import React from 'react';
 
-//import {Header } from '../../../build/components/knowBase';
-import { Header } from '../../../build/common/common';
+import {Header } from '../../../build/components/knowBase';
+
   
 const page = {
     title: 'echarts',
@@ -35,7 +35,7 @@ class Echarts extends React.Component {
       return (
          
           <div>
-            
+            <Header />
             <div className="org-base">
         
             <div id="org-map" className="org-content">

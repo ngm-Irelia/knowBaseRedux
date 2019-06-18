@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { Header } from '../../../build/common/common';
-//import {Header } from '../../../build/components/knowBase';
-import store from '../../../build/store/store';
+ 
+import {Header } from '../../../build/components/knowBase';
+ 
 
 const page = {
   title: '可视化',
@@ -15,23 +14,10 @@ const page = {
 
 class Visualization extends Component {
 
-  componentWillMount (){
-    console.log("Visualization componentWillMount ------")
-  }
-  componentDidMount(){
-      console.log("Visualization componentDidMount --------")
-  }
-
-  componentWillReceiveProps(){
-    console.log("Visualization componentWillReceiveProps --------")
-  }
-
   render() {
     return (
 
       <div>
-        {/* <Provider store={store}> */}
-        <div>
           <Header />
 
           <div className="main-case">
@@ -68,11 +54,6 @@ class Visualization extends Component {
             </div>
           </div>
 
-
-
-         {/*  <Footer /> */}
-        </div>
-        {/* </Provider> */}
       </div>
 
     );

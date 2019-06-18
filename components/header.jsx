@@ -2,7 +2,6 @@
  * Created by ngm on 2018/4/25.
  */
 import React,{Component} from 'react';
-//import he from '../public/css/component/header.css';
 
 class Header extends Component {
     constructor(props) {
@@ -44,16 +43,7 @@ class Header extends Component {
         }
     }
 
-    componentWillMount (){
-        console.log("component Header componentWillMount *********** ")
-      }
-      componentDidMount(){
-          console.log("component Header Echarts componentDidMount ******** ")
-      }
     
-      componentWillReceiveProps(){
-        console.log("component Header Echarts componentWillReceiveProps ************** ")
-      }
 
     //返回地图
     handleGoMap(name) {
