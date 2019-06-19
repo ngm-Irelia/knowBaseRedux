@@ -26,12 +26,7 @@ class Visualization extends Component {
                 <div className="layui-inline content">
                   <div className="layui-inline case-img"><a href="/bmap" target="_black"><img src="/image/img/case1.jpg" /></a> </div>
                   <p className="show-title">百度地图</p>
-                  <p className="show-detail">包括地图上的一些分析，交互操作！！！</p>
-                </div>
-                <div className="layui-inline content even center">
-                  <div className="layui-inline case-img"><img src="/image/img/case2.jpg" /> </div>
-                  <p className="show-title">arcgis</p>
-                  <p className="show-detail">包括地图上的一些分析，交互操作！！！</p>
+                  <p className="show-detail">包括地图上的一些分析，交互操作,arcgis有离线版本，需要自己搭建本地服务器~暂不展示，可弹原理</p>
                 </div>
                 <div className="layui-inline content">
                   <div className="layui-inline case-img"><img src="/image/img/case3.jpg" /> </div>

@@ -43,6 +43,7 @@ export default ( props ) => {
             {/* <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } /> */}
 
             <link rel="stylesheet" href={ contextPath + 'js/public/layui/css/layui.css' } />
+            <link rel="stylesheet" href={ contextPath + 'js/public/components/Components.css' } />
 
             <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
             
@@ -56,6 +57,7 @@ export default ( props ) => {
             </Layout>
          
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
+        <script type="text/javascript" src={ `${ contextPath }/js/public/components/Components.js` }></script>
         <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>
 
         { res.js && res.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) } 
