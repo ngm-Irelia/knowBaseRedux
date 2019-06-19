@@ -90,5 +90,4 @@ class Index extends Component {
 }
 
 Index.UIPage = page;
-
 export default Index;

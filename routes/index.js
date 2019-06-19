@@ -31,6 +31,13 @@ router.get('/visualization', function(req, res, next) {
     }); 
 });
 
+router.get('/bmap', function(req, res, next) { 
+    res.render('map/bmap', { 
+        title: 'bmap',
+        theme: req.cookies.theme || THEME_DEFAULT 
+    }); 
+});
+
 router.get('/H5', function(req, res, next) {
     res.render('H5/index', { 
         title: 'H5',
@@ -53,7 +60,7 @@ router.get('/D3', function(req, res, next) {
 });
 
 router.get('/echarts', function(req, res, next) {
-    res.render('visualization/echarts', { 
+    res.render('map/echarts', { 
         title: 'Echarts',
         theme: req.cookies.theme || THEME_DEFAULT  
     });

@@ -21,6 +21,8 @@ export default ( props ) => {
     const context = props.context;
     const contextPath = context.contextPath;
     const page = props.component.UIPage || {};
+    const gistype = context.gis.type;
+    const gisjs = context.gis.js;
 
     console.log("props ================= ");
     console.log(props);
@@ -41,6 +43,8 @@ export default ( props ) => {
             {/* <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } /> */}
 
             <link rel="stylesheet" href={ contextPath + 'js/public/layui/css/layui.css' } />
+
+            <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
             
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + '/css' + cssTheme + css.replace(/\/css/, '') } /> ) }
@@ -59,7 +63,8 @@ export default ( props ) => {
         { props.view ? <script src={ `${ contextPath }/views/${ props.view }.${ props.env === 'development' ? 'js' : 'min.js' }` } /> : null }
         <script dangerouslySetInnerHTML={ { __html: initScript } } />
         
-        {/* <script type="module" src={ `${ contextPath }/js/modules/use.js` } /> */}
+        {gistype=='bmap'?<script src= "http://api.map.baidu.com/api?v=2.0&ak=oGipGGHoW0wB5s24tUaobMN4ku23wKCu" />:null}
+        {gistype=='supermap'?<script src= {gisjs}/>:null}
         </body>
         </html>
     );
