@@ -48,7 +48,7 @@ class Index extends Component {
                 </div>
                 <div className="layui-col-sm6 layui-col-md3 ">
                   <div className="content">
-                    <div><img alt="1" src="/image/img/Big_icon3.png" /></div>
+                    <div><img alt="/CSS3" src="/image/img/Big_icon3.png" /></div>
                     <div>
                       <p className="label">CSS3效果</p>
                       <p>纯CSS3实现的一些效果</p>
@@ -60,10 +60,10 @@ class Index extends Component {
                   <div className="content">
                     <div><img alt="/CSS3" src="/image/img/Big_icon4.png" /></div>
                     <div>
-                      <p className="label">知识杂记</p>
-                      <p>使用中技术的记录~~</p>
+                      <p className="label">自己的框架</p>
+                      <p>自己写的框架，包含通用的方法，组件，样式等~~</p>
                     </div>
-                    <a href='/knowledge'>查看 ></a>
+                    <a href='/components'>查看 ></a>
                   </div>
                 </div>
               </div>

@@ -8,8 +8,7 @@ const page = {
     css: [
       "/css/visualization/echarts.css"
     ],
-    js: [ 
-      "/js/getDataRequest.js",
+    js: [
       "/js/public/echarts.min.js",
       "/js/echarts/echartsMap.js",
       "/js/echarts/echarts.js"
