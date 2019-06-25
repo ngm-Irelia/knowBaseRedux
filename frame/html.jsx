@@ -42,8 +42,8 @@ export default ( props ) => {
             <title>{ page.title || 'UI Page title' }</title>
             {/* <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } /> */}
 
-            <link rel="stylesheet" href={ contextPath + 'js/public/layui/css/layui.css' } />
-            <link rel="stylesheet" href={ contextPath + 'js/public/components/Components.css' } />
+            <link rel="stylesheet" href={ contextPath + '/js/public/layui/css/layui.css' } />
+            <link rel="stylesheet" href={ contextPath + '/js/public/components/Components.css' } />
 
             <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
             
