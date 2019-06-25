@@ -63,7 +63,7 @@ class Index extends Component {
                       <p className="label">自己的框架</p>
                       <p>自己写的框架，包含通用的方法，组件，样式等~~</p>
                     </div>
-                    <a href='/components'>查看 ></a>
+                    <a href='/ngm'>查看 ></a>
                   </div>
                 </div>
               </div>

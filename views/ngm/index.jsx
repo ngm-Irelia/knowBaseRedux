@@ -4,10 +4,10 @@ import { Header } from '../../../build/components/knowBase';
 const page = {
   title: '首页',
   css: [
-    '/css/first.css',
-    '/js/public/pageswitch/css/plugins.min.css',
-    '/js/public/pageswitch/css/style.light-blue-500.min.css',
-    '/js/public/pageswitch/css/sys-navigation.css'
+    '/css/ngm/ngm.css',
+    '/js/public/pageswitch/plugins.min.css',
+    '/js/public/pageswitch/style.light-blue-500.min.css',
+    '/js/public/pageswitch/sys-navigation.css'
   ],
   js: [
     '/js/public/pageswitch/js/Components.js',
@@ -138,13 +138,13 @@ class Index extends Component {
             <div className="show-func">
               <div className="show-btn">
                 <div>
-                  <input type="checkbox" id="read" className="casia-checkbox" value="read"/> <label for="read" style={{"user-select": "none"}}>读书</label>
-                  <input type="checkbox" id="study" className="casia-checkbox" value="study"/> <label for="study" style={{"user-select": "none"}}>学习</label>
+                  <input type="checkbox" id="read" className="casia-checkbox" value="read"/> <label for="read" style={{"userSelect": "none"}}>读书</label>
+                  <input type="checkbox" id="study" className="casia-checkbox" value="study"/> <label for="study" style={{"userSelect": "none"}}>学习</label>
                 </div>
 
                 <div>
-                  <input type="radio" id="readradio" className="casia-radio" name="s" value="s1"/> <label for="readradio" style={{"user-select": "none"}}>读书</label>
-                  <input type="radio" id="studyradio" className="casia-radio" name="s" value="s2"/> <label for="studyradio" style={{"user-select": "none"}}>学习</label>
+                  <input type="radio" id="readradio" className="casia-radio" name="s" value="s1"/> <label for="readradio" style={{"userSelect": "none"}}>读书</label>
+                  <input type="radio" id="studyradio" className="casia-radio" name="s" value="s2"/> <label for="studyradio" style={{"userSelect": "none"}}>学习</label>
                 </div>
                 
               </div>
@@ -153,7 +153,7 @@ class Index extends Component {
                 <div>
                   <div className="casia-btn-primary" title="casia-btn-primary" >
                     <input type="checkbox" id="ds" className="casia-checkbox" value="study"/> 
-                    <label for="ds" style={{"user-select": "none"}}>多选</label>
+                    <label for="ds" style={{"userSelect": "none"}}>多选</label>
                   </div>
                   
                 </div>
@@ -161,7 +161,7 @@ class Index extends Component {
                 <div>
                   <div className="casia-btn-primary" title="casia-btn-primary" >
                       <input type="radio" id="dan" className="casia-radio" name="dan" value="s1"/> 
-                      <label for="dan" style={{"user-select": "none"}}>单选</label>
+                      <label for="dan" style={{"userSelect": "none"}}>单选</label>
                   </div>
                 
                 </div>
@@ -294,13 +294,13 @@ class Index extends Component {
             <div className="show-func">
               <div className="show-btn">
                 <div>
-                  <input type="checkbox" id="read" className="casia-checkbox" value="read" /> <label for="read" style={{"user-select": "none"}}>读书</label>
-                  <input type="checkbox" id="study" className="casia-checkbox" value="study" /> <label for="study" style={{"user-select": "none"}}>学习</label>
+                  <input type="checkbox" id="read" className="casia-checkbox" value="read" /> <label for="read" style={{"userSelect": "none"}}>读书</label>
+                  <input type="checkbox" id="study" className="casia-checkbox" value="study" /> <label for="study" style={{"userSelect": "none"}}>学习</label>
                 </div>
 
                 <div>
-                  <input type="radio" id="readradio" className="casia-radio" name="s" value="s1" /> <label for="readradio" style={{"user-select": "none"}}>读书</label>
-                  <input type="radio" id="studyradio" className="casia-radio" name="s" value="s2" /> <label for="studyradio" style={{"user-select": "none"}}>学习</label>
+                  <input type="radio" id="readradio" className="casia-radio" name="s" value="s1" /> <label for="readradio" style={{"userSelect": "none"}}>读书</label>
+                  <input type="radio" id="studyradio" className="casia-radio" name="s" value="s2" /> <label for="studyradio" style={{"userSelect": "none"}}>学习</label>
                 </div>
 
               </div>
@@ -309,7 +309,7 @@ class Index extends Component {
                 <div>
                   <div className="casia-btn-primary" title="casia-btn-primary" >
                     <input type="checkbox" id="ds" className="casia-checkbox" value="study" />
-                    <label for="ds" style={{"user-select": "none"}}>多选</label>
+                    <label for="ds" style={{"userSelect": "none"}}>多选</label>
                   </div>
 
                 </div>
@@ -317,7 +317,7 @@ class Index extends Component {
                 <div>
                   <div className="casia-btn-primary" title="casia-btn-primary" >
                     <input type="radio" id="dan" className="casia-radio" name="dan" value="s1" />
-                    <label for="dan" style={{"user-select": "none"}}>单选</label>
+                    <label for="dan" style={{"userSelect": "none"}}>单选</label>
                   </div>
 
                 </div>

@@ -48,7 +48,7 @@ export default ( props ) => {
             <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
             
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
-            { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + '/css' + cssTheme + css.replace(/\/css/, '') } /> ) }
+            { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css.replace(/\/css/, '/css' + cssTheme) } /> ) }
         </head>
         <body>
          
