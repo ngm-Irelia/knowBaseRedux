@@ -9,6 +9,8 @@
 /** 
  * @namespace Components的所有类均放在Components命名空间下
  */
+//var Components = window.Components = Components || {};
+
 var Components = window.Components = Components || {};
 
 (function() {
@@ -309,7 +311,36 @@ var Components = window.Components = Components || {};
 			if (window.ActiveXObject || "ActiveXObject" in window || navigator.userAgent.includes("Edge")) return true;
 			else return false;
 		},
-
+		/**
+		 * Blob 下载文件功能
+		 * @param {*} filename 文件名
+		 * @param {*} content 文件内容
+		 */
+		downloadByBlob: function(filename,content){
+			// 创建隐藏的可下载链接
+			var eleLink = document.createElement('a');
+			eleLink.download = filename;
+			eleLink.style.display = 'none';
+			// 字符内容转变成blob地址
+			var blob = new Blob([content]);
+			eleLink.href = URL.createObjectURL(blob);
+			// 触发点击
+			document.body.appendChild(eleLink);
+			eleLink.click();
+			// 然后移除
+			document.body.removeChild(eleLink);
+		},
+		
+		/**
+		 * a标签 下载文件功能
+		 * @param {*} url 下载地址
+		 */
+		downloadByA: function (url) {
+            $('body').append($('<a href="'+url+'" download id="openWin"></a>'))
+            document.getElementById("openWin").click();//点击事件
+            $('#openWin').remove();
+        }
+		
 	}); 
   
 
@@ -329,7 +360,7 @@ var Components = window.Components = Components || {};
 		 * @param {*} card 
 		 */
 		checkIDCard: function (card){
-			let regexp = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/;
+			let regexp = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
 			
 			return (regexp.test(card));
 		},
@@ -693,19 +724,31 @@ var Components = window.Components = Components || {};
 
 
 
-
+	/**
+	 * 提示信息弹框 
+	 * @param {*} config  弹框需要的字段信息
+	 * {
+			title:"弹框标题-支持html"
+			content:"弹框内容-支持html"
+			color:标题文字颜色
+			time:弹框过time时间后，隐藏
+			btn:"确定"
+		}
+	 */
 	Components.ct.alert = function(config){
 		if(typeof title === "boolean"){
 			document.body.removeChild(document.getElementById("ct_page_alert"));
 			return '';
 		}
 		let showtitle = config.title?config.title:'提示';
-		let showcontent = config.content?config.content:' ';
+		let showcontent = config.content?config.content:'';
 		let showcolor = config.color ? config.color:'#09a5ee';
+		let showTime = config.time?config.time:'';
+		let showBtn = config.btn?config.btn:'确定';
 		let alertHtml = `<div id="ct_page_alert_box">
-				<h6 id="ct_page_alert_title" style="color:${showcolor}">${showtitle}</h6>
+				<div id="ct_page_alert_title" style="color:${showcolor}">${showtitle}</div>
 				<div id="ct_page_alert_content">${showcontent}</div>
-				<button type="button" id="ct_page_alert_button" >确定</button>
+				<button type="button" id="ct_page_alert_button" >${showBtn}</button>
 			</div>`;
 
 		let divL = document.createElement("div");
@@ -714,10 +757,21 @@ var Components = window.Components = Components || {};
 		document.body.appendChild(divL);
 
 
+		let timeout = '';
 		//绑定事件
 		document.getElementById("ct_page_alert_button").addEventListener("click",function(){
 			document.body.removeChild(document.getElementById("ct_page_alert"));
+			
+			if(timeout){
+				clearTimeout(timeout);
+			}
+			
 		})
+		if(showTime){
+			timeout = setTimeout(function(){
+				document.body.removeChild(document.getElementById("ct_page_alert"));
+			},showTime)
+		}
 
 	}
 
