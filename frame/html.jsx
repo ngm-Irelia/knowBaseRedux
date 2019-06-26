@@ -43,9 +43,10 @@ export default ( props ) => {
             {/* <link rel="shortcut icon" href={ `${ contextPath }/image/logo.ico` } /> */}
 
             <link rel="stylesheet" href={ contextPath + '/js/public/layui/css/layui.css' } />
-            <link rel="stylesheet" href={ contextPath + '/js/public/components/Components.css' } />
-
             <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
+            <link rel="stylesheet" href={ contextPath + '/js/public/comp/Components.css' } />
+
+            
             
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css.replace(/\/css/, '/css' + cssTheme) } /> ) }
@@ -57,7 +58,7 @@ export default ( props ) => {
             </Layout>
          
         <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
-        <script type="text/javascript" src={ `${ contextPath }/js/public/components/Components.js` }></script>
+        <script type="text/javascript" src={ `${ contextPath }/js/public/comp/Components.js` }></script>
         <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>
 
         { res.js && res.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) } 
