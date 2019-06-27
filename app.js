@@ -54,6 +54,7 @@ app.use(cookieParser());
 if ( app.get( 'env' ) === 'production' ) {
     app.use( express.static( path.join( __dirname, 'build/public' ) ) );
 } else {
+    console.log("aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbb")
     app.use( express.static( path.join( __dirname, 'public' ) ) );
 }
 

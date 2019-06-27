@@ -44,12 +44,16 @@ export default ( props ) => {
 
             <link rel="stylesheet" href={ contextPath + '/js/public/layui/css/layui.css' } />
             <link rel="stylesheet" href={ contextPath + '/css' + cssTheme + '/public/global.css' } />
+            <link rel="stylesheet" href={ contextPath + '/js/public/jquery-custom-content-scroller/jquery.mCustomScrollbar.css' } />
             <link rel="stylesheet" href={ contextPath + '/js/public/comp/Components.css' } />
 
             
             
             { res.css && res.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css } /> ) }
             { page.css && page.css.map( ( css, index ) => <link key={ index } rel="stylesheet" href={ contextPath + css.replace(/\/css/, '/css' + cssTheme) } /> ) }
+        
+            <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
+            <script type="text/javascript" src={ `${ contextPath }/js/public/comp/Components.js` }></script>
         </head>
         <body>
          
@@ -57,9 +61,9 @@ export default ( props ) => {
               { props.children }
             </Layout>
          
-        <script type="text/javascript" src={ `${ contextPath }/js/public/jquery.js` }></script>
-        <script type="text/javascript" src={ `${ contextPath }/js/public/comp/Components.js` }></script>
+        
         <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>
+        <script type="text/javascript" src={ `${ contextPath }/js/public/jquery-custom-content-scroller/jquery.mCustomScrollbar.concat.min.js` }></script>
 
         { res.js && res.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) } 
         { page.js && page.js.map( ( js, index ) => <script key={ index } src={ contextPath + js } /> ) }

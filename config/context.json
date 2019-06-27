@@ -2,7 +2,7 @@
   "contextPath": "",
   "url": "/knowBase",
   "gis": {
-    "type": "bmap",
+    "type": "111bmap",
     "cssFirst":"http://172.16.11.146:8080/arcgis_js_api/library/3.22/3.22/esri/css/esri.css",
     "cssSecond":"null",
     "js":"http://172.16.11.146:8080/arcgis_js_api/library/3.22/3.22/init.js",

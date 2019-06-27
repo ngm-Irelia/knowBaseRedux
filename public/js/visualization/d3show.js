@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+(function() {
 
     var h, w;
     var svg = d3.select('body')
@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', function() {
         h = window.innerHeight;
         svg.attr({
             width: w,
-            height: h
+            height: h,
+            style:"position:fixed;top:0px;"
         });
         d3.select('#border').attr('width', w);
     }
@@ -128,6 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //图表页面 动画3
     function anim3() {
+        console.log("图表页面 动画3 ....")
         var margin, space, barWidth, rects, nb, g, data;
 
         (function() {
@@ -892,4 +894,4 @@ window.addEventListener('DOMContentLoaded', function() {
 
     intro(); //todo 首页
 
-});
+})();

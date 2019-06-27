@@ -17,8 +17,8 @@ var Components = window.Components = Components || {};
 	class Analytic {
 
 		constructor() {
-			this.imgUrl = '../typeicon/';                              //图片的路径  ！！ 需改这里，里面就不需要修改了
-			this.countPosNodesUrl = '../countPosNodes.js'; //countPosNodes.js的路径  ！！ 需改这里，里面就不需要修改了
+			this.imgUrl = '/js/public/comp/modules/analytic/typeicon/';                              //图片的路径  ！！ 需改这里，里面就不需要修改了
+			this.countPosNodesUrl = '/js/public/comp/modules/analytic/countPosNodes.js'; //countPosNodes.js的路径  ！！ 需改这里，里面就不需要修改了
 
 			this.useType = "show";        // analytic ：分析模式；   show ： 显示模式；  easy : 简单模式，data外面传入，没有交互
 			this.showData = [];           // 简单模式 显示的数据
