@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 import { Header,Footer } from '../../../build/common/common';
 import store from '../../../build/store/store';
+
+
+console.log("store ======================== Provider *******************");
+console.log(store);
 
 const page = {
   title: '首页',
@@ -21,18 +25,13 @@ class H5 extends Component {
   render() {
     return (
 
-      <Provider store={store}>
-
         <div>
-          <Header />
+          <Header store={store} />
 
           H5
-          
-          <Footer />
 
         </div>
 
-      </Provider>
 
     );
   }

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
+//import { Provider } from 'react-redux';
+const {Provider} = require('react-redux');
+
+import store from '../store';
 
 const PAGE_ROOT = 'ngm-base-page-div';
 
@@ -25,7 +29,9 @@ export default ( props ) => {
     const gisjs = context.gis.js;
 
     console.log("props ================= ");
-    console.log(props);
+    //console.log(Provider)
+    //console.log(store)
+    //console.log(props);
 
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
 
@@ -57,9 +63,12 @@ export default ( props ) => {
         </head>
         <body>
          
+        <Provider store={store}>
             <Layout id={ PAGE_ROOT } contextPath={ contextPath }>
               { props.children }
             </Layout>
+        </Provider>
+            
          
         
         <script type="text/javascript" src={ `${ contextPath }/js/public/layui/layui.js` }></script>
