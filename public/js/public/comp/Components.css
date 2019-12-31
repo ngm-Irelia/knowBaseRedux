@@ -1,0 +1,485 @@
+/**
+ * @fileoverview 所有样式 必须引入~~
+ *
+ * @author NGM
+ * @version 1.0
+ */
+
+/*页面通用的样式*/
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} 
+
+html, body {
+	height: 100%;
+	color:#555;
+}
+
+
+/*页面通用的样式 end*/
+
+/*
+	Components 通用的样式 。 
+	因为没有使用 预处理语言， 没法把一些配置提取出来作为参数， 可惜！
+*/
+
+/* 通用的颜色 */
+.casia-primary {
+	background-color: #fff;
+	color:#555;
+	border: 1px solid #c0c4cc;
+}
+
+.casia-normal {
+	background-color: #33d0ff;/*409EFE*/
+	color:#fff;
+}
+
+.casia-warning {
+	background-color: #ffc000;/*E6A23A*/
+	color:#fff;
+}
+
+.casia-danger {
+	background-color: #e60012;
+	color:#fff;
+}
+
+/* 通用的颜色 end*/
+
+
+/* 通用的按钮 */
+
+/* 为了使用尽可能少些class，这里不拆成
+.casia-btn .btn-primary 这种格式 
+虽然现在这样，多写很多样式，但是使用少写class*/
+
+/* 默认按钮 */
+.casia-btn-primary {
+	display: inline-block;
+	border: 1px solid #c0c4cc;
+	background-color: #fff;
+	color:#555;
+	border-radius: 2px;
+	width: 72px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-btn-normal {
+	display: inline-block;
+  background-color: #33d0ff;/*409EFE*/
+	color:#fff;
+	border-radius: 2px;
+	width: 72px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-btn-warning {
+	display: inline-block;
+	background-color: #ffc000;/*E6A23A*/
+	color:#fff;
+	border-radius: 2px;
+	width: 72px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-btn-danger {
+	display: inline-block;
+	background-color: #e60012;
+	color:#fff;
+	border-radius: 2px;
+	width: 72px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+/* 默认按钮 end*/
+
+/* 圆角按钮 */
+.casia-angle-btn-primary {
+	display: inline-block;
+	border: 1px solid #c0c4cc;
+	background-color: #fff;
+	color:#555;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-angle-btn-normal {
+	display: inline-block;
+  background-color: #33d0ff;/*409EFE*/
+	color:#fff;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-angle-btn-warning {
+	display: inline-block;
+	background-color: #ffc000;/*E6A23A*/
+	color:#fff;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-angle-btn-danger {
+	display: inline-block;
+	background-color: #e60012;
+	color:#fff;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+/* 圆角按钮 end*/
+
+/* 圆按钮 */
+.casia-circle-btn-primary {
+	display: inline-block;
+	border: 1px solid #c0c4cc;
+	background-color: #fff;
+	color:#555;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-circle-btn-normal {
+	display: inline-block;
+  background-color: #33d0ff;/*409EFE*/
+	color:#fff;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-circle-btn-warning {
+	display: inline-block;
+	background-color: #ffc000;/*E6A23A*/
+	color:#fff;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.casia-circle-btn-danger {
+	display: inline-block;
+	background-color: #e60012;
+	color:#fff;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+/* 圆按钮 end */
+
+/* 通用的按钮 end*/
+
+
+/* 通用的input框*/
+.casia-input {
+	border: 1px solid #c0c4cc;
+	height: 30px;
+	padding: 0 15px;
+	border-radius: 5px;
+}
+
+.casia-area {
+	border: 1px solid #c0c4cc;
+	height: 50px;
+	padding: 15px;
+	border-radius: 5px;
+	color: #333;
+	font-size: 14px;
+}
+/* 通用的input框 end*/
+
+
+/* 通用单选框，多选框 */
+
+.casia-checkbox {
+	position: relative;
+}
+
+.casia-checkbox::before {
+	position: absolute;
+	content: '\2610';
+	width: 14px;
+	height: 14px;
+	margin-left: -1px;
+	border: 0px #33d0ff solid;
+	background-color: #fff;
+	line-height: 14px;
+	color: #33d0ff;
+	font-size: 20px;
+}
+
+.casia-checkbox[type=checkbox]:checked::before {
+	content: '\2611';
+	/* color: #fff;
+	background-color: #33d0ff; */
+}
+
+.casia-radio {
+	position: relative;
+}
+
+
+.casia-radio::before {
+	position: absolute;
+	content: '';
+	width: 12px;
+	height: 12px;
+	margin-left: -1px;
+	border: 1px #33d0ff solid;
+	border-radius: 50%;
+	background-color: #fff;
+	line-height: 14px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.casia-radio[type=radio]:checked::before {
+	content: "\2022";
+	color: #fff;
+	background-color: #33d0ff;
+}
+
+/* 通用单选框，多选框 end*/
+
+
+.casia-border {
+	border: 1px solid #c0c4cc;
+}
+
+
+
+
+/* 按钮动画， 大小， loading动画 */
+
+
+
+
+
+
+
+/*后面是不同的组件的样式*/ 
+ 
+ /*barChart*/
+.common-showLineChart {
+	padding: 10px;
+}
+.common-showLineChart-outLine {
+	background-color: #c0c4cc;
+	position: relative;
+	height: 30px;
+	margin: 8px 0;
+}
+
+.common-showLineChart-innerLine {
+	height: 30px;
+	position: absolute;
+	width:0px;
+	transition: width 2s;
+}
+
+.common-showLineChart-index, .common-showLineChart-title, .common-showLineChart-number {
+	position: absolute;
+	height: 100%;
+	line-height: 30px;
+}
+
+.common-showLineChart-index {
+	left: 5px;
+	top: -5px;
+	width: 28px;
+	height: 28px;
+	font-size: 12px;
+	background-color: rgba(0,0,0,0);
+	 
+}
+.common-showLineChart-index-background {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-width:30px 30px 30px 0;
+	border-style:solid;
+}
+
+.common-showLineChart-title {
+	left:30px;
+	width: 78%;
+	font-size: 14px;
+}
+
+.common-showLineChart-number {
+	right:8px;
+	font-size: 12px;
+}
+
+/*barChart end*/
+
+/*loading*/
+.loading-model {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 999;
+	background-color: rgba(222, 222, 222, 0.2);
+}
+
+.loading-model svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+/*loading end*/
+
+
+/*alert*/
+#ct_page_alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 1001;
+}
+
+#ct_page_alert_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  min-height: 170px;
+  margin: -210px 0 0 -150px;
+  background-color: #fff;
+}
+
+#ct_page_alert_title {
+  height: 40px;
+  margin-top: 10px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #09a5ee;
+}
+
+#ct_page_alert_content {
+  min-height: 106px;
+  padding: 10px 20px 60px;
+  line-height: 22px;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+}
+
+#ct_page_alert_button {
+  width: 80px;
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px #09a5ee solid;
+	outline: none;
+	border-radius: 2px;
+}
+
+#ct_page_alert_button:hover {
+  background: #edfaff;
+}
+/*alert end*/

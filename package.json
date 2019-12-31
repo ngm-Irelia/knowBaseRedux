@@ -10,7 +10,7 @@
     "start:dev": "gulp develop",
     "stylus-white": "gulp convert-stylus --theme white",
     "prestylus-blue": "npm run stylus-white",
-    "stylus-blue": "gulp convert-stylus --theme blue-white",
+    "stylus-blue": "gulp convert-stylus --theme black",
     "prestylus": "npm run stylus-blue",
     "stylus": "gulp convert-stylus",
     "prebuild": "npm run stylus",
@@ -74,9 +74,6 @@
     "run-sequence": "^1.2.2",
     "webpack": "^2.3.1",
     "webpack-stream": "^3.2.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",

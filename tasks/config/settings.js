@@ -1,6 +1,3 @@
-/**
- * Created by ngm on 2018/4/26.
- */
 const path = require( 'path' );
 
 const cwd = process.cwd();

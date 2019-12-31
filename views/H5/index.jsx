@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 import { Header,Footer } from '../../../build/common/common';
 import store from '../../../build/store/store';
 
-let ReactDOMServer = require('react-dom/server');
+
+console.log("store ======================== Provider *******************");
+console.log(store);
 
 const page = {
   title: '首页',
@@ -14,32 +16,26 @@ const page = {
   ]
 };
 
-class Appa extends Component {
+class H5 extends Component {
 
   componentDidMount() {
     console.log("in H5")
-    console.log(store)
   }
 
   render() {
     return (
-      <Provider store={store}>
-        哈哈哈哈
-      </Provider>
-    )
+
+        <div>
+          <Header store={store} />
+
+          H5
+
+        </div>
+
+
+    );
   }
 }
-
-class H5 extends Component {
-
-  componentDidMount() {
-  }
-
-  render() {
-    return ReactDOMServer.renderToString(<Appa />);
-  }
-}
-
 
 H5.UIPage = page;
 

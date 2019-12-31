@@ -52,14 +52,7 @@ module.exports = (callback) => {
   //     .pipe(gulp.dest(path.join( output, 'black' )));
   // } );
   //
-  // gulp.task( 'theme-blue-white', function () {
-  //   return gulp.src(path.join(source, '**', '*.styl'))
-  //     .pipe(plumber())
-  //     .pipe(cached('convert-stylus'))
-  //     .pipe(print())
-  //     .pipe(stylus({import: [path.join(skins, 'blue-white', 'style.styl')]}))
-  //     .pipe(gulp.dest(path.join( output, 'blue-white' )));
-  // } );
+ 
   //
   // gulp.task( 'theme-white', function () {
   //   return gulp.src(path.join(source, '**', '*.styl'))
@@ -69,13 +62,12 @@ module.exports = (callback) => {
   //     .pipe(stylus({import: [path.join(skins, 'white', 'style.styl')]}))
   //     .pipe(gulp.dest(path.join( output, 'white' )));
   // } );
-  // let tasks = ['theme-black', 'theme-blue-white', 'theme-white'];
+  // let tasks = ['theme-black',  'theme-white'];
   // runSequence( 'theme-black',
-  //   ['theme-blue-white'],
   //   callback );
 
 
-  // const themes = ['blue-white']; //'black', 'blue-white', 'white'
+  // const themes = ['blue-white']; //'black', 'white'
   // let themeTasks = themes.map((theme) => {
   //   return gulp.src(path.join(source, '**', '*.styl'))
   //     .pipe(plumber())
