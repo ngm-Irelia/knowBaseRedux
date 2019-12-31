@@ -23,8 +23,6 @@ export default (state=defaultState, action) => {
   }
 
   if(action.type === INIT_LIST_ACTION){
-    console.log("reducer---- action.value ===")
-    console.log(action.value);
     const newState = JSON.parse( JSON.stringify(state));
 
     newState.focused = action.value;

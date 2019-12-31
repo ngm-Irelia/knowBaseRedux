@@ -18,12 +18,9 @@ const initListAction = (res) => ({
 export const getTodoList = () => {
 	return (dispatch)=>{ //combineReducers的作用，不用使用store.dispatch
 		axios.get('./headerList.json').then( (res)=>{
-			console.log(res);
 			const action = initListAction(res);
 			dispatch(action);
     	}).catch( (res)=>{
-			console.log("catch--- ");
-
 			const action = initListAction(["hello", "axios", "ngm"]);
 			dispatch(action);
 		})

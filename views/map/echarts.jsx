@@ -18,14 +18,12 @@ const page = {
 class Echarts extends React.Component {
 
   componentWillMount (){
-    console.log("Echarts componentWillMount ------")
+    
   }
   componentDidMount(){
-      console.log("Echarts componentDidMount --------")
   }
 
   componentWillReceiveProps(){
-    console.log("Echarts componentWillReceiveProps --------")
   }
 
 

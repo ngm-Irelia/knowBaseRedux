@@ -16,11 +16,9 @@ const page = {
 class Index extends Component {
 
   componentDidMount() {
-    console.log("in index")
   }
 
   handleChangeInput() {
-    console.log("in handleChangeInput")
   }
 
   render() {

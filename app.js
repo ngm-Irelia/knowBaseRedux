@@ -43,7 +43,7 @@ const options = {
     xfwd: true
 };
 const newProxy  = proxy( options );
-app.use( '/knowBase/*', newProxy );
+app.use( '/server/*', newProxy );
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -54,7 +54,6 @@ app.use(cookieParser());
 if ( app.get( 'env' ) === 'production' ) {
     app.use( express.static( path.join( __dirname, 'build/public' ) ) );
 } else {
-    console.log("aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbb")
     app.use( express.static( path.join( __dirname, 'public' ) ) );
 }
 
@@ -85,11 +84,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
-// 监听端口
-/*app.listen(9525, function(){
-    console.log('服务器运行中');
-});*/
 
 module.exports = app;

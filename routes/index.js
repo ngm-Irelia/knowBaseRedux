@@ -3,19 +3,21 @@ var router = express.Router();
 
 const THEME_DEFAULT = 'white';
 
-//require("node-jsx").install();   //安装"node-jsx"，安装该模块可以使nodejs兼容jsx语法
-//var React=require("react");
-//var Com=require('../component/test.js').Component //引入react组件
-
-
-
 router.get('/', function(req, res, next) {
+    res.render('index', { 
+        title: 'index',
+        theme: req.cookies.theme || THEME_DEFAULT
+    });
+});
+
+//红色 各种图表动画
+/* router.get('/', function(req, res, next) {
     //var html=React.renderToString(Com({name:"dudeyouth"}))   //向组件传参，并使用renderToString方法解析成html字符串
     res.render('visualization/d3show', { 
         title: 'd3show',
         theme: req.cookies.theme || THEME_DEFAULT
     });
-});
+}); */
 
 router.get('/index', function(req, res, next) { 
     res.render('index', { 
@@ -68,7 +70,6 @@ router.get('/echarts', function(req, res, next) {
 
 
 router.get('/d3show', function(req, res, next) {
-    //var html=React.renderToString(Com({name:"dudeyouth"}))   //向组件传参，并使用renderToString方法解析成html字符串
     res.render('visualization/d3show', { 
         title: 'd3show',
         theme: req.cookies.theme || THEME_DEFAULT
@@ -76,7 +77,6 @@ router.get('/d3show', function(req, res, next) {
 });
 
 router.get('/analysis', function(req, res, next) {
-    //var html=React.renderToString(Com({name:"dudeyouth"}))   //向组件传参，并使用renderToString方法解析成html字符串
     res.render('visualization/analysis', { 
         title: 'analysis',
         theme: req.cookies.theme || THEME_DEFAULT
@@ -85,7 +85,6 @@ router.get('/analysis', function(req, res, next) {
 
 
 router.get('/ngm', function(req, res, next) {
-    //var html=React.renderToString(Com({name:"dudeyouth"}))   //向组件传参，并使用renderToString方法解析成html字符串
     res.render('ngm/index', { 
         title: '框架',
         theme: req.cookies.theme || THEME_DEFAULT

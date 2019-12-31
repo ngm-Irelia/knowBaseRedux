@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './layouts/default';
 import resources from './config/resources.json';
-//import { Provider } from 'react-redux';
 const {Provider} = require('react-redux');
 
 import store from '../store';
@@ -27,11 +26,6 @@ export default ( props ) => {
     const page = props.component.UIPage || {};
     const gistype = context.gis.type;
     const gisjs = context.gis.js;
-
-    console.log("props ================= ");
-    //console.log(Provider)
-    //console.log(store)
-    //console.log(props);
 
     const initScript = initScriptTmpl( JSON.stringify( context ), props.data );
 

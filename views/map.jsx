@@ -15,7 +15,6 @@ const page = {
 class Map extends Component {
 
   componentDidMount() {
-    console.log("in index")
   }
 
   render() {

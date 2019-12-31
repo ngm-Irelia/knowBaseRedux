@@ -13,7 +13,6 @@ const page = {
 class Index extends Component {
 
   componentDidMount() {
-    console.log("in index")
   }
 
   render() {

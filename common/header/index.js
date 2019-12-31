@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         handleFocused() {
-            console.log("aaaaaabbbcccdddeeefffggg !!!!!");
             const action = actionCreators.setSearchFocus();
             dispatch(action);  //其实就是store.dispatch()
 
@@ -39,19 +38,14 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props);
-
-        console.log(" ------------------------------------------ ");
-        console.log(props)
-
     }
 
     clickHeadNav(){
         console.log("click click click ");
-        console.log(this.props)
     }
 
     render() {
-        console.log('render ------------------------ ', this.props);
+        
         return (
              
                 <div className="header">
